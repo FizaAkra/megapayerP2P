@@ -1,11 +1,29 @@
 <?php
 
-
+use App\Http\Controllers\Admin\AdminController as AdminAdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+// routes/web.php
+
+
+
+
+
+
+
+
+
 
 Route::get('/clear', function () {
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
+Route::get('/admin/upload', function () {
+    return view('upload');
+})->name('admin.upload.form');
+
+Route::post('/admin/upload', [AdminAdminController::class, 'uploadFile'])->name('admin.upload');
+
+
 
 //Crons
 Route::get('cron', 'CronController@cron')->name('cron');
@@ -24,6 +42,7 @@ Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(
     Route::post('reply/{ticket}', 'replyTicket')->name('reply');
     Route::post('close/{ticket}', 'closeTicket')->name('close');
     Route::get('download/{ticket}', 'ticketDownload')->name('download');
+  
 });
 
 Route::get('app/deposit/confirm/{hash}', 'Gateway\PaymentController@appDepositConfirm')->name('deposit.app.confirm');

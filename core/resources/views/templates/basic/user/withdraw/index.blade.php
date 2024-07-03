@@ -63,13 +63,13 @@
 
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input type="text" name="wallet" class="form-control" placeholder="@lang('Wallet Address')" required>
+                                <input type="text" name="wallet" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Wallet Address')" required>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="number" step="any" name="amount" class="form-control" placeholder="@lang('Withdraw Amount')" autocomplete="off" required>
+                                <input type="number" step="any" name="amount" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Withdraw Amount')" autocomplete="off" required>
                                 <small class="text--base"><span>@lang('Charge :')</span> <span class="withdraw-charge">0.00 {{ $crypto->code }}</span></small>
                             </div>
                         </div>

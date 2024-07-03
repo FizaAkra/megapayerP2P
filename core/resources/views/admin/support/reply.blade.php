@@ -26,7 +26,7 @@
                         <div class="row ">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" required id="inputMessage"></textarea>
+                                    <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="message" rows="5" required id="inputMessage"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6">

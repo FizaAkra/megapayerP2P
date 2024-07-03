@@ -45,7 +45,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>@lang('Minutes')</label>
-                            <input type="number" class="form-control" name="minute" value="{{ old('minute') }}" required>
+                            <input type="number" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="minute" value="{{ old('minute') }}" required>
                         </div>
                     </div>
                     <div class="modal-footer">

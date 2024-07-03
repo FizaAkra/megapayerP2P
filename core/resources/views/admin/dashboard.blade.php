@@ -7,7 +7,7 @@
 @section('panel')
     @if (@json_decode($general->system_info)->version > systemDetails()['version'])
         <div class="row">
-            <div class="col-md-12">
+            <!-- <div class="col-md-12">
                 <div class="card text-white bg-warning mb-3">
                     <div class="card-header">
                         <h3 class="card-title"> @lang('New Version Available') <button class="btn btn--dark float-end">@lang('Version') {{ json_decode($general->system_info)->version }}</button> </h3>
@@ -19,7 +19,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     @endif
     @if (@json_decode($general->system_info)->message)
@@ -115,11 +115,11 @@
         </div>
     </div><!-- row end-->
 
-    <div class="row gy-4 mt-2">
+    <!--<div class="row gy-4 mt-2">
         <div class="col-md-12">
             <h4>@lang('Withdrawal Summary')</h4>
         </div>
-    </div>
+    </div>-->
 
     <div class="row gy-4 mt-2">
         @foreach ($withdrawals as $withdrawal)
@@ -140,7 +140,7 @@
         @endforeach
     </div>
 
-    <div class="row mb-none-30 mt-5">
+   <!-- <div class="row mb-none-30 mt-5">
         <div class="col-xl-4 col-lg-6 mb-30">
             <div class="card overflow-hidden">
                 <div class="card-body">
@@ -165,7 +165,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
     {{-- Cron Modal --}}
     <div class="modal fade" id="cronModal" role="dialog" tabindex="-1">

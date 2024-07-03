@@ -65,12 +65,12 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>@lang('Completed Trade')</label>
-                            <input type="number" class="form-control" placeholder="0" name="completed_trade" required>
+                            <input type="number" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="0" name="completed_trade" required>
                         </div>
 
                         <div class="form-group">
                             <label>@lang('Advertisement Limit')</label>
-                            <input type="number" class="form-control" placeholder="0" name="ad_limit" required>
+                            <input type="number" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="0" name="ad_limit" required>
                         </div>
                     </div>
 

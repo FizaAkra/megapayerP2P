@@ -311,7 +311,9 @@ label.required:after {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  box-shadow: 0 4px 8px #1D5550;
 }
+
 
 @media (max-width: 575px) {
   .trade-request-form {
@@ -331,7 +333,8 @@ label.required:after {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  border: 1px solid #ebebeb;
+  border: 1px solid #1D5550;
+  box-shadow:0 4px 8px #1D5550;
 }
 
 .terms-sidebar__widget {
@@ -463,9 +466,9 @@ label.required:after {
 }
 
 .btn-list li a.active {
-  background-color: hsl(var(--base)) !important;
+  background-color: #fff !importan !important;
   color: #fff !important;
-  border-color: hsl(var(--base)) !important;
+  border-color: #fff !importan !important;
 }
 
 .btn-list li a span {

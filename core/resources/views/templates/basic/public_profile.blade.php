@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-xxl-3 col-md-3 col-sm-6 form-group">
                             <label class="float-start">@lang('Amount')</label>
-                            <input type="number" step="any" name="amount" value="{{ request()->amount }}" class="form-control">
+                            <input type="number" step="any" name="amount" value="{{ request()->amount }}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;">
                         </div>
                         <div class="col-xxl-2 col-md-2 col-sm-6 form-group">
                             <button type="submit" class="btn--base w-100">@lang('Search')</button>

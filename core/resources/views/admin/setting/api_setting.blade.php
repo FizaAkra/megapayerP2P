@@ -14,7 +14,7 @@
                                     ( <small>@lang('For the api key please visit :')
                                         <a target="_blank" class="text--info" href="https://currencylayer.com/">@lang('Currency Layer')</a>
                                     </small> )
-                                    <input class="form-control" type="text" name="fiat_api_key" value="{{ $general->fiat_api_key }}">
+                                    <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="fiat_api_key" value="{{ $general->fiat_api_key }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -23,7 +23,7 @@
                                     ( <small>@lang('For the api key please visit :')
                                         <a target="_blank" class="text--info" href="https://coinmarketcap.com/">@lang('CoinMarketCap')</a>
                                     </small> )
-                                    <input class="form-control" type="text" name="crypto_api_key" value="{{ $general->crypto_api_key }}">
+                                    <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="crypto_api_key" value="{{ $general->crypto_api_key }}">
                                 </div>
                             </div>
 
@@ -37,19 +37,19 @@
                             <div class="col-md-6">
                                 <div class="form-group ">
                                     <label> @lang('Public Key')</label>
-                                    <input type="text" class="form-control" name="public_key" value="{{ $general->public_key }}" required>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="public_key" value="{{ $general->public_key }}" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group ">
                                     <label> @lang('Private Key')</label>
-                                    <input type="text" class="form-control" name="private_key" value="{{ $general->private_key }}" required>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="private_key" value="{{ $general->private_key }}" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group ">
                                     <label> @lang('Merchant ID')</label>
-                                    <input type="text" class="form-control" name="merchant_id" value="{{ $general->merchant_id }}" required>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="merchant_id" value="{{ $general->merchant_id }}" required>
                                 </div>
                             </div>
                         </div>

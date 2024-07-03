@@ -22,7 +22,7 @@
                                             <div class="avatar-edit">
                                                 <input type="file" class="profilePicUpload" name="image_input" id="profilePicUpload1" accept=".png, .jpg, .jpeg">
                                                 <label for="profilePicUpload1" class="bg--primary">@lang('Upload Image')</label>
-                                                <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png')</b>. @lang('Image will be resized into') {{getFileSize('seo')}}@lang('px'). </small>
+                                                <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg').</b>. @lang('Image will be resized into') {{getFileSize('seo')}}@lang('px'). </small>
                                             </div>
                                         </div>
                                     </div>
@@ -44,15 +44,15 @@
 
                                 <div class="form-group">
                                     <label>@lang('Meta Description')</label>
-                                    <textarea name="description" rows="3" class="form-control" required>{{ @$seo->data_values->description }}</textarea>
+                                    <textarea name="description" rows="3" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>{{ @$seo->data_values->description }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>@lang('Social Title')</label>
-                                    <input type="text" class="form-control" name="social_title" value="{{ @$seo->data_values->social_title }}" required/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="social_title" value="{{ @$seo->data_values->social_title }}" required/>
                                 </div>
                                 <div class="form-group">
                                     <label>@lang('Social Description')</label>
-                                    <textarea name="social_description" rows="3" class="form-control" required>{{ @$seo->data_values->social_description }}</textarea>
+                                    <textarea name="social_description" rows="3" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>{{ @$seo->data_values->social_description }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn--primary w-100 h-45">@lang('Submit')</button>

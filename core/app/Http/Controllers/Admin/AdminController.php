@@ -209,4 +209,28 @@ class AdminController extends Controller
         header("Content-Type: " . $mimetype);
         return readfile($filePath);
     }
+   
+    public function uploadFile(Request $request)
+    {
+        // Validate the file input (allow various mime types)
+        $request->validate([
+            'file' => 'required|mimes:jpeg,jpg,png,gif,mp4,avi,webm|max:20480', // Allow various file types with a max size of 20MB
+        ]);
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $filePath = 'uploads/files/' . $filename;
+
+            // Store the uploaded file
+            $file->move(public_path('uploads/files'), $filename);
+
+            // Save the path to the database or pass it to the view
+            // Assuming you save it to the database, adjust as necessary
+
+            return back()->with('success', 'File uploaded successfully')->with('file', $filePath);
+        }
+
+        return back()->withErrors(['file' => 'Please choose a file to upload.']);
+    }
 }

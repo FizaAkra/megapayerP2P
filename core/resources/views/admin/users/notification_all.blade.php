@@ -12,7 +12,7 @@
                                     <label>@lang('Being Sent') </label>
                                     <div class="input-group">
                                         <span class="input-group-text">@lang('To')</span>
-                                        <select class="form-control" name="being_sent_to" required>
+                                        <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="being_sent_to" required>
                                             @foreach($notifyToUser as $key => $toUser)
                                                 <option value="{{ $key }}">{{ __($toUser) }}</option>
                                             @endforeach
@@ -25,7 +25,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>@lang('Subject') </label>
-                                    <input class="form-control" name="subject" type="text" placeholder="@lang('Email subject')" required />
+                                    <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="subject" type="text" placeholder="@lang('Email subject')" required />
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -40,14 +40,14 @@
                                     <div class="col-md-4 start-from-col">
                                         <div class="form-group">
                                             <label>@lang('Start Form') </label>
-                                            <input class="form-control" name="start_form" type="number" placeholder="@lang('Start form user')" required />
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="start_form" type="number" placeholder="@lang('Start form user')" required />
                                         </div>
                                     </div>
                                     <div class="col-md-4 per-batch-col">
                                         <div class="form-group">
                                             <label>@lang('Per Batch') </label>
                                             <div class="input-group">
-                                                <input class="form-control" name="batch" type="number" placeholder="@lang('How many user')" required />
+                                                <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="batch" type="number" placeholder="@lang('How many user')" required />
                                                 <span class="input-group-text">
                                                     @lang('User')
                                                 </span>
@@ -58,7 +58,7 @@
                                         <div class="form-group">
                                             <label>@lang('Cooling Period') </label>
                                             <div class="input-group">
-                                                <input class="form-control" name="cooling_time" type="number" placeholder="@lang('Waiting time')" required />
+                                                <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="cooling_time" type="number" placeholder="@lang('Waiting time')" required />
                                                 <span class="input-group-text">
                                                     @lang('Seconds')
                                                 </span>
@@ -264,7 +264,7 @@
                     $('.input-append').html(`
                     <div class="form-group" id="user_list_wrapper">
                         <label class="required">@lang('Select User')</label>
-                        <select name="user[]"  class="form-control" id="user_list" required multiple>
+                        <select name="user[]"  class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="user_list" required multiple>
                             <option disabled>@lang('Select One')</option>
                         </select>
                     </div>
@@ -279,7 +279,7 @@
                     $('.input-append').html(`
                     <div class="form-group">
                         <label class="required">@lang('Number Of Top Deposited User')</label>
-                        <input class="form-control" type="number" name="number_of_top_deposited_user" >
+                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" name="number_of_top_deposited_user" >
                     </div>
                     `);
                     changeEmailSendingOptionHtml(true);
@@ -291,7 +291,7 @@
                     <div class="form-group">
                         <label class="required">@lang('Number Of Days')</label>
                         <div class="input-group">
-                            <input class="form-control" type="number" name="number_of_days" >
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" name="number_of_days" >
                             <span class="input-group-text">@lang('Days')</span>
                         </div>
                     </div>

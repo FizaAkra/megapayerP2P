@@ -13,7 +13,7 @@
                 <input type="hidden" name="update_id" value="">
                 <div class="form-group">
                     <label>@lang('Form Type')</label>
-                    <select name="form_type" class="form-control" required>
+                    <select name="form_type" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                         <option value="">@lang('Select One')</option>
                         <option value="text">@lang('Text')</option>
                         <option value="textarea">@lang('Textarea')</option>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="form-group">
                     <label>@lang('Is Required')</label>
-                    <select name="is_required" class="form-control" required>
+                    <select name="is_required" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                         <option value="">@lang('Select One')</option>
                         <option value="required">@lang('Required')</option>
                         <option value="optional">@lang('Optional')</option>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label>@lang('Form Label')</label>
-                    <input type="text" name="form_label" class="form-control" required>
+                    <input type="text" name="form_label" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                 </div>
                 <div class="form-group extra_area">
 

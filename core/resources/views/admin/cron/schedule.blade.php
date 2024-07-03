@@ -80,14 +80,14 @@
                     <div class="form-group">
                         <label>@lang('Name')</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" name="name" required>
+                            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="name" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>@lang('Interval')</label>
                         <div class="col-sm-12">
                             <div class="input-group">
-                                <input type="number" class="form-control" name="interval" required>
+                                <input type="number" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="interval" required>
                                 <span class="input-group-text">@lang('Seconds')</span>
                             </div>
                         </div>

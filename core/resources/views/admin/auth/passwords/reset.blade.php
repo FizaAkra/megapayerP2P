@@ -16,11 +16,11 @@
                                     <input type="hidden" name="token" value="{{ $token }}">
                                     <div class="form-group">
                                         <label>@lang('New Password')</label>
-                                        <input type="password" name="password" class="form-control" required>
+                                        <input type="password" name="password" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                                     </div>
                                     <div class="form-group">
                                         <label>@lang('Re-type New Password')</label>
-                                        <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" required>
+                                        <input type="password" name="password_confirmation" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="password_confirmation" required>
                                     </div>
                                     <div class="d-flex flex-wrap justify-content-between">
                                         <a href="{{ route('admin.login') }}" class="forget-text">@lang('Login Here')</a>

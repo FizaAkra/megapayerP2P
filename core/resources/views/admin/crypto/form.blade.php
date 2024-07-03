@@ -26,7 +26,7 @@
                                             <div class="avatar-edit">
                                                 <input type="file" class="profilePicUpload" name="image" id="profilePicUpload1" accept=".png, .jpg, .jpeg">
                                                 <label for="profilePicUpload1" class="bg--primary">@lang('Upload Image')</label>
-                                                <small class="mt-2  ">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png').</b> @lang('Image will be resized into ') <span>{{ __($cryptoImage->size) }}</span> @lang('px')</small>
+                                                <small class="mt-2  ">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png'),@lang('gif'),@lang('mp4').</b> @lang('Image will be resized into ') <span>{{ __($cryptoImage->size) }}</span> @lang('px')</small>
                                             </div>
                                         </div>
                                     </div>
@@ -36,24 +36,24 @@
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label>@lang('Name')</label>
-                                        <input class="form-control" type="text" name="name" value="{{ old('name', @$crypto->name) }}" placeholder="@lang('e.g.') @lang('Bitcoin')" required>
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="name" value="{{ old('name', @$crypto->name) }}" placeholder="@lang('e.g.') @lang('Bitcoin')" required>
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label>@lang('Code')</label>
-                                        <input class="form-control" type="text" name="code" value="{{ old('code', @$crypto->code) }}" placeholder="@lang('e.g.') @lang('BTC')" required>
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="code" value="{{ old('code', @$crypto->code) }}" placeholder="@lang('e.g.') @lang('BTC')" required>
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label>@lang('Symbol')</label>
-                                        <input class="form-control" type="text" name="symbol" value="{{ old('', @$crypto->symbol) }}" placeholder="@lang('e.g.') ₿" required>
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="symbol" value="{{ old('', @$crypto->symbol) }}" placeholder="@lang('e.g.') ₿" required>
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label>@lang('Rate')</label>
                                         <div class="input-group">
                                             <div class="input-group-text"><span>1&nbsp;</span> <span class="currency-symbol">{{ @$crypto->code }}</span> &nbsp; =</div>
-                                            <input class="form-control" type="number" step="any" name="rate" value="{{ getAmount(@$crypto->rate) }}" required>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" step="any" name="rate" value="{{ getAmount(@$crypto->rate) }}" required>
                                             <span class="input-group-text">@lang('USD')</span>
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                                     <div class="form-group col-md-6">
                                         <label>@lang('Fixed Charge')</label>
                                         <div class="input-group">
-                                            <input class="form-control" type="number" step="any" name="deposit_charge_fixed" value="{{ old('number', getAmount(@$crypto->deposit_charge_fixed)) }}" placeholder="0" required>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" step="any" name="deposit_charge_fixed" value="{{ old('number', getAmount(@$crypto->deposit_charge_fixed)) }}" placeholder="0" required>
                                             <span class="input-group-text currency-symbol">{{ __(@$crypto->code) }}</span>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@
                                     <div class="form-group col-md-6">
                                         <label>@lang('Percentage Charge')</label>
                                         <div class="input-group">
-                                            <input class="form-control" type="number" step="0.01" max="100" name="deposit_charge_percent" value="{{ old('deposit_charge_percent', getAmount(@$crypto->deposit_charge_percent)) }}" placeholder="0" required>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" step="0.01" max="100" name="deposit_charge_percent" value="{{ old('deposit_charge_percent', getAmount(@$crypto->deposit_charge_percent)) }}" placeholder="0" required>
                                             <span class="input-group-text">%</span>
                                         </div>
                                     </div>
@@ -83,14 +83,14 @@
                                     <div class="form-group col-md-6">
                                         <label>@lang('Fixed Charge')</label>
                                         <div class="input-group">
-                                            <input class="form-control" type="number" step="any" name="withdraw_charge_fixed" value="{{ old('withdraw_charge_fixed', getAmount(@$crypto->withdraw_charge_fixed)) }}" placeholder="0" required>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" step="any" name="withdraw_charge_fixed" value="{{ old('withdraw_charge_fixed', getAmount(@$crypto->withdraw_charge_fixed)) }}" placeholder="0" required>
                                             <span class="input-group-text currency-symbol">{{ __(@$crypto->code) }}</span>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label>@lang('Percentage Charge')</label>
                                         <div class="input-group">
-                                            <input class="form-control" type="number" step="0.01" max="100" name="withdraw_charge_percent" value="{{ old('withdraw_charge_percent', getAmount(@$crypto->withdraw_charge_percent)) }}" placeholder="0" required>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" step="0.01" max="100" name="withdraw_charge_percent" value="{{ old('withdraw_charge_percent', getAmount(@$crypto->withdraw_charge_percent)) }}" placeholder="0" required>
                                             <span class="input-group-text">%</span>
                                         </div>
                                     </div>

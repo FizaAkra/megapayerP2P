@@ -69,3 +69,61 @@
         </li>
     </ul>
 </div>
+<style>
+    /* Sidebar Styles */
+    .sidebar-menu {
+        background-color: #FEFFFF;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #1D5550;
+        overflow-y: scroll; /* Add scrollbar */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .sidebar-menu::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+
+    .sidebar-menu .sidebar-menu-list__item {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-menu-list__link {
+        display: flex;
+        align-items: center;
+        color: #1D5550;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .sidebar-menu-list__link:hover {
+        background-color: #90A3A2;
+        color: #FEFFFF;
+    }
+
+    .sidebar-menu-list__link .icon {
+        margin-right: 10px;
+    }
+
+    .sidebar-menu-list__link .text {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Close button */
+    .sidebar-menu__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    /* Icons */
+    .las,
+    .la,
+    .lab {
+        font-size: 18px; /* Adjust icon size */
+    }
+</style>

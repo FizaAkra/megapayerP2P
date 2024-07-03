@@ -12,7 +12,7 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label>@lang('Email or Username')</label>
-                                        <input autofocus="off" class="form-control" name="value" required type="text" value="{{ old('value') }}">
+                                        <input autofocus="off" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="value" required type="text" value="{{ old('value') }}">
                                     </div>
 
                                     <x-captcha />

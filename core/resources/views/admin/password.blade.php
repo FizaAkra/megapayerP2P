@@ -42,17 +42,17 @@
 
                         <div class="form-group">
                             <label>@lang('Password')</label>
-                            <input class="form-control" type="password" name="old_password" required>
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="password" name="old_password" required>
                         </div>
 
                         <div class="form-group">
                             <label>@lang('New Password')</label>
-                            <input class="form-control" type="password" name="password" required>
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="password" name="password" required>
                         </div>
 
                         <div class="form-group">
                             <label>@lang('Confirm Password')</label>
-                            <input class="form-control" type="password" name="password_confirmation" required>
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="password" name="password_confirmation" required>
                         </div>
                         <button type="submit" class="btn btn--primary w-100 btn-lg h-45">@lang('Submit')</button>
                     </form>

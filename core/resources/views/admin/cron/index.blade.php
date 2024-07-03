@@ -112,15 +112,15 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>@lang('Name')</label>
-                            <input class="form-control" name="name" required type="text">
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="name" required type="text">
                         </div>
                         <div class="form-group">
                             <label>@lang('Next Run')</label>
-                            <input class="form-control" name="next_run" required type="datetime-local">
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="next_run" required type="datetime-local">
                         </div>
                         <div class="form-group">
                             <label>@lang('Schedule')</label>
-                            <select class="form-control" name="cron_schedule_id" required>
+                            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;"  name="cron_schedule_id" required>
                                 @foreach ($schedules as $schedule)
                                     <option value="{{ $schedule->id }}">{{ $schedule->name }}</option>
                                 @endforeach
@@ -128,7 +128,7 @@
                         </div>
                         <div class="form-group">
                             <label>@lang('Url')</label>
-                            <input class="form-control" name="url" required type="text">
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="url" required type="text">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -152,15 +152,15 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>@lang('Name')</label>
-                            <input class="form-control" name="name" required type="text">
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="name" required type="text">
                         </div>
                         <div class="form-group">
                             <label>@lang('Next Run')</label>
-                            <input class="form-control" name="next_run" required type="datetime-local">
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="next_run" required type="datetime-local">
                         </div>
                         <div class="form-group">
                             <label>@lang('Schedule')</label>
-                            <select class="form-control" name="cron_schedule_id" required>
+                            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="cron_schedule_id" required>
                                 @foreach ($schedules as $schedule)
                                     <option value="{{ $schedule->id }}">{{ $schedule->name }}</option>
                                 @endforeach
@@ -168,7 +168,7 @@
                         </div>
                         <div class="form-group urlGroup">
                             <label>@lang('Url')</label>
-                            <input class="form-control" name="url" type="text">
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="url" type="text">
                         </div>
                     </div>
                     <div class="modal-footer">

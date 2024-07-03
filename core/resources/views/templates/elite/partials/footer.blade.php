@@ -1,182 +1,133 @@
 @php
     $socialIconElements = getContent('social_icon.element');
-    $policyElements     = getContent('policy_pages.element');
-    $subscribeContent   = getContent('subscribe.content', true);
-    $cryptos = App\Models\CryptoCurrency::active()
-        ->orderBy('name')
-        ->take(7)
-        ->get();
+    $policyElements = getContent('policy_pages.element');
+    $cryptos = App\Models\CryptoCurrency::active()->orderBy('name')->take(7)->get();
 @endphp
 
-
-<footer class="footer-area">
+<footer class="footer-area" style="background:#1D5550">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="footer-logo">
-                    <a href="{{ route('home') }}">
-                        <img src="{{ getImage(getFilePath('logoIcon') . '/logo.png') }}"></a>
-                </div>
+            <div class="col-lg-12 text-center mb-4">
+                <a href="{{ route('home') }}">
+                    <img src="{{ getImage(getFilePath('logoIcon') . '/logo.png') }}" alt="Logo" class="footer-logo">
+                </a>
             </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="row footer-item-wrapper">
-                    <div class="col-6">
-                        <div class="footer-item">
-                            <h5 class="footer-item__title">@lang('Quick Link')</h5>
-                            <ul class="footer-menu">
-                                <li class="footer-menu__item">
-                                    @auth
-                                        <a href="{{ route('user.home') }}" class="footer-menu__link">@lang('Dashboard')</a>
-                                    @else
-                                        <a href="{{ route('home') }}" class="footer-menu__link">@lang('Home')</a>
-                                    @endauth
-                                </li>
-                                <li class="footer-menu__item">
-                                    <a href="{{ route('pages', 'about') }}" class="footer-menu__link">
-                                        @lang('About')
-                                    </a>
-                                </li>
-                                <li class="footer-menu__item">
-                                    <a href="{{ route('user.trade.request.running') }}" class="footer-menu__link">
-                                        @lang('Trade')
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="footer-item two">
-                            <h5 class="footer-item__title">@lang('Legal')</h5>
-                            <ul class="footer-menu">
-                                @foreach ($policyElements as $policy)
-                                    <li class="footer-menu__item">
-                                        <a class="footer-menu__link" href="{{ route('policy.pages', encrypt([slug(@$policy->data_values->title), $policy->id])) }}">
-                                            {{ __($policy->data_values->title) }}
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="footer-title text-white">@lang('Quick Links')</h5>
+                <ul class="footer-menu">
+                    @auth
+                        <li><a href="{{ route('user.home') }}">@lang('Dashboard')</a></li>
+                    @else
+                        <li><a href="{{ route('home') }}">@lang('Home')</a></li>
+                    @endauth
+                    <li><a href="{{ route('pages', 'about') }}">@lang('About')</a></li>
+                    <li><a href="{{ route('user.trade.request.running') }}">@lang('Trade')</a></li>
+                </ul>
             </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="row footer-item-wrapper">
-                    <div class="col-6">
-                        <div class="footer-item">
-                            <h5 class="footer-item__title">@lang('Buy Asset')</h5>
-                            <ul class="footer-menu">
-                                @foreach ($cryptos as $crypto)
-                                    <li class="footer-menu__item">
-                                        <a class="footer-menu__link" href="{{ route('advertisement.all', ['buy', $crypto->code, 'all']) }}">
-                                            {{ $crypto->code }}
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="footer-item two">
-                            <h5 class="footer-item__title">@lang('Sell Asset')</h5>
-                            <ul class="footer-menu">
-                                @foreach ($cryptos as $crypto)
-                                    <li class="footer-menu__item">
-                                        <a class="footer-menu__link" href="{{ route('advertisement.all', ['sell', $crypto->code, 'all']) }}">
-                                            {{ $crypto->code }}
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="footer-title text-white">@lang('Legal')</h5>
+                <ul class="footer-menu">
+                    @foreach ($policyElements as $policy)
+                        <li><a href="{{ route('policy.pages', encrypt([slug(@$policy->data_values->title), $policy->id])) }}">{{ __($policy->data_values->title) }}</a></li>
+                    @endforeach
+                </ul>
             </div>
-            <div class="col-xxl-5 offset-xxl-1 col-xl-6 col-lg-7 col-md-9">
-                <div class="footer-item newsletter">
-                    <h5 class="footer-item__title">@lang('Subscribe')</h5>
-                    <p class="footer-item__desc">
-                        {{ __(@$subscribeContent->data_values->heading) }}
-                    </p>
-                    <form method="get" class="newsletter-form" id="subscribe-form">
-                        <div class="form-group input-group gap-3">
-                            <input type="email" name="email" class="form-control form--control" placeholder="@lang('Enter your email')">
-                            <button type="submit" class="btn btn-outline--base">
-                                {{ __(@$subscribeContent->data_values->button_text) }}
-                           </button>
-                        </div>
-                    </form>
-                    <p class="footer-item__desc sm">
-                        {{ __(@$subscribeContent->data_values->subscribing_message) }}
-                    </p>
-                    <h5 class="footer-item__title mb-0">@lang('Our Community')</h5>
-                    <ul class="social-list">
-                        @foreach ($socialIconElements as $social)
-                            <li class="social-list__item">
-                                <a class="social-list__link flex-center" href="{{ @$social->data_values->url }}" target="_blank">
-                                    @php echo @$social->data_values->social_icon @endphp
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="footer-title text-white">@lang('Buy Asset')</h5>
+                <ul class="footer-menu">
+                    @foreach ($cryptos as $crypto)
+                        <li><a href="{{ route('advertisement.all', ['buy', $crypto->code, 'all']) }}">{{ $crypto->code }}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="footer-title text-white">@lang('Sell Asset')</h5>
+                <ul class="footer-menu">
+                    @foreach ($cryptos as $crypto)
+                        <li><a href="{{ route('advertisement.all', ['sell', $crypto->code, 'all']) }}">{{ $crypto->code }}</a></li>
+                    @endforeach
+                </ul>
             </div>
         </div>
-        <div class="bottom-footer py-3 mt-60">
-            <p class="bottom-footer__text">
-                &copy; {{ date('Y') }}
-                <a href="{{ route('home') }}" class="text--base">
-                    {{ __(gs('site_name')) }}
-                </a>
-                @lang('All Rights Reserved')
-            </p>
+        <div class="row mt-4">
+            <div class="col-lg-12 text-center">
+                <h5 class="footer-title text-white">@lang('Follow Us')</h5>
+                <ul class="social-list">
+                    @foreach ($socialIconElements as $social)
+                        <li class="social-list__item">
+                            <a href="{{ @$social->data_values->url }}" target="_blank">
+                                @php echo @$social->data_values->social_icon @endphp
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-footer py-3 mt-4 text-center">
+            <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}" class="text--base">{{ __(gs('site_name')) }}</a> @lang('All Rights Reserved')</p>
         </div>
     </div>
 </footer>
 
-@push('script')
-    <script>
-        "use strict";
-        (function($) {
-            $('#subscribe-form').on('submit', function(e) {
-                e.preventDefault();
-                let formData = new FormData($(this)[0]);
-                let $this = $(this);
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': "{{ csrf_token() }}"
-                    },
-                    url: "{{ route('subscribe') }}",
-                    method: "POST",
-                    data: formData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    beforeSend: function() {
-                        $this.find('button[type=submit]').html(`
-                        <span class="right-sidebar__button-icon">
-                            <i class="las la-spinner la-spin"></i> {{ __(@$subscribeContent->data_values->button_text) }}
-                        </span>`).attr('disabled', true);
-                    },
-                    complete: function(e) {
-                        setTimeout(() => {
-                            $this.find('button[type=submit]').html(
-                                `{{ __(@$subscribeContent->data_values->button_text) }}`
-                                ).attr('disabled', false);
-                        }, 500);
-                    },
-                    success: function(resp) {
-                        setTimeout(() => {
-                            if (resp.success) {
-                                notify('success', resp.message);
-                                $($this).trigger('reset');
-                            } else {
-                                notify('error', resp.message || resp.error);
-                            }
-                        }, 500);
-                    }
-                });
-            });
-        })(jQuery);
-    </script>
+@push('style')
+<style>
+    .footer-area {
+        background: #000;
+        color: #fff;
+        padding: 30px 0;
+        font-size: 14px;
+    }
+    .footer-logo {
+        max-width: 200px; /* Increased size for logo */
+    }
+    .footer-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #fff; /* Ensure footer title text is white */
+    }
+    .footer-menu {
+        list-style: none;
+        padding: 0;
+    }
+    .footer-menu li {
+        margin-bottom: 10px;
+    }
+    .footer-menu a {
+        color: #fff; /* Ensure all text is white */
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .footer-menu a:hover {
+        color: #aaa;
+    }
+    .social-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Increased gap for more prominence */
+    }
+    .social-list__item a {
+        color: #fff;
+        font-size: 28px; /* Increased size for social icons */
+        transition: color 0.3s;
+    }
+    .social-list__item a:hover {
+        color: #aaa;
+    }
+    .bottom-footer {
+        border-top: 1px solid #444;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+    .text--base {
+        color: #fff; /* Ensure all text is white */
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .text--base:hover {
+        color: #0000;
+    }
+</style>
 @endpush

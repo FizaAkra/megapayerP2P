@@ -13,11 +13,11 @@
                     <div class="d-flex flex-wrap gap-4">
                         <div class="flex-grow-1">
                             <label>@lang('TRX/Username')</label>
-                            <input type="text" name="search" value="{{ request()->search }}" class="form-control">
+                            <input type="text" name="search" value="{{ request()->search }}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;">
                         </div>
                         <div class="flex-grow-1">
                             <label>@lang('Type')</label>
-                            <select name="trx_type" class="form-control">
+                            <select name="trx_type" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;">
                                 <option value="">@lang('All')</option>
                                 <option value="+" @selected(request()->trx_type == '+')>@lang('Plus')</option>
                                 <option value="-" @selected(request()->trx_type == '-')>@lang('Minus')</option>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="flex-grow-1">
                             <label>@lang('Remark')</label>
-                            <select class="form-control" name="remark">
+                            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="remark">
                                 <option value="">@lang('Any')</option>
                                 @foreach($remarks as $remark)
                                 <option value="{{ $remark->remark }}" @selected(request()->remark == $remark->remark)>{{ __(keyToTitle($remark->remark)) }}</option>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="flex-grow-1">
                             <label>@lang('Date')</label>
-                            <input name="date" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="en" class="datepicker-here form-control" data-position='bottom right' placeholder="@lang('Start date - End date')" autocomplete="off" value="{{ request()->date }}">
+                            <input name="date" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="en" class="datepicker-here form-control" data-position='bottom right' placeholder="@lang('Start date - End date')" autocomplete="off" value="{{ request()->date }}" style="background-color:#D2DDDD; border:1px solid #1D5550; color:black">
                         </div>
                         <div class="flex-grow-1 align-self-end">
                             <button class="btn btn--primary w-100 h-45"><i class="fas fa-filter"></i> @lang('Filter')</button>

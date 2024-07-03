@@ -17,11 +17,11 @@
                     @csrf
                     <div class="form-group">
                         <label>@lang('Username or Email')</label>
-                        <input type="text" name="username" value="{{ old('username') }}" class="form-control" required>
+                        <input type="text" name="username" value="{{ old('username') }}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                     </div>
                     <div class="form-group">
                         <label>@lang('Password')</label>
-                        <input type="password" name="password" class="form-control" required>
+                        <input type="password" name="password" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                     </div>
 
                     <x-captcha />

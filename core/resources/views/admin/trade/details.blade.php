@@ -11,7 +11,7 @@
                 </div>
                 <div class="chat-box__body">
                     <div class="chat-main position-relative">
-                        <div class="bg-el position-absolute" style="background-image: url({{ getImage($activeTemplateTrue . 'images/chat-pattern.png', '1380x930') }});"></div>
+                        <div class="bg-el position-absolute" ></div>
 
                         @foreach ($tradeDetails->chats()->get() as $chat)
                             @if ($chat->user_id == $tradeDetails->buyer_id)

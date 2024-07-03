@@ -21,7 +21,7 @@
 
                                     <div class="form-group">
                                         <label>@lang('Confirm Password')</label>
-                                        <input class="form-control" name="password_confirmation" required type="password">
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="password_confirmation" required type="password">
                                     </div>
                                     <div class="mt-4">
                                         <button class="btn btn--base" type="submit"> @lang('Reset Password')</button>

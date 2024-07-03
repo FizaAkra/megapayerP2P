@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label>@lang('Subject')</label>
-                                <input type="text" class="form-control" name="subject" required value="{{ old('subject') }}" />
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="subject" required value="{{ old('subject') }}" />
                             </div>
                             <div class="form-group col-md-12">
                                 <label>@lang('Body')</label>

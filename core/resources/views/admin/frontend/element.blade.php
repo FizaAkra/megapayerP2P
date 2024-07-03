@@ -34,7 +34,7 @@
                                                         <div class="avatar-edit">
                                                             <input type="file" class="profilePicUpload" name="image_input[{{ $imgKey }}]" id="profilePicUpload{{ $loop->index }}" accept=".png, .jpg, .jpeg">
                                                             <label for="profilePicUpload{{ $loop->index }}" class="bg--primary">{{ __(keyToTitle($imgKey)) }}</label>
-                                                            <small class="mt-2  ">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png')</b>.
+                                                            <small class="mt-2  ">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png'),@lang('gif'),@lang('mp4')</b>.
                                                                 @if (@$section->element->images->$imgKey->size)
                                                                     | @lang('Will be resized to'):
                                                                     <b>{{ @$section->element->images->$imgKey->size }}</b>
@@ -64,7 +64,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>{{ __(keyToTitle($k)) }}</label>
-                                                <textarea rows="10" class="form-control" name="{{ $k }}" required>{{ @$data->data_values->$k }}</textarea>
+                                                <textarea rows="10" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" required>{{ @$data->data_values->$k }}</textarea>
                                             </div>
                                         </div>
                                     @elseif($content == 'textarea-nic')
@@ -81,7 +81,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>{{ __(keyToTitle(@$selectName)) }}</label>
-                                                <select class="form-control" name="{{ @$selectName }}" required>
+                                                <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ @$selectName }}" required>
                                                     @foreach ($content->options as $selectItemKey => $selectOption)
                                                         <option value="{{ $selectItemKey }}" @if (@$data->data_values->$selectName == $selectItemKey) selected @endif>{{ __($selectOption) }}</option>
                                                     @endforeach
@@ -92,7 +92,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>{{ __(keyToTitle($k)) }}</label>
-                                                <input type="text" class="form-control" name="{{ $k }}" value="{{ @$data->data_values->$k }}" required />
+                                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" value="{{ @$data->data_values->$k }}" required />
                                             </div>
                                         </div>
                                     @endif

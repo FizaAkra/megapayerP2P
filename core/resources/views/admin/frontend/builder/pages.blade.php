@@ -57,11 +57,11 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label> @lang('Page Name')</label>
-                            <input type="text" class="form-control" name="name" value="{{ old('name') }}" required>
+                            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="name" value="{{ old('name') }}" required>
                         </div>
                         <div class="form-group">
                             <label> @lang('Slug')</label>
-                            <input type="text" class="form-control" name="slug" value="{{ old('slug') }}" required>
+                            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="slug" value="{{ old('slug') }}" required>
                         </div>
                     </div>
                     <div class="modal-footer">

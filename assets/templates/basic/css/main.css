@@ -49,7 +49,7 @@ span {
 }
 
 a:hover {
-    color: #fca120;
+    color: #fff;
 }
 
 /* reset css end */
@@ -853,7 +853,7 @@ hr {
 }
 
 .bg-dark {
-    background-color: #041838 !important;
+    background-color: #1D5550;
 }
 
 .btn-danger {
@@ -1208,7 +1208,7 @@ textarea:focus,
 }
 
 .page-breadcrumb li a:hover {
-    color: #fca120;
+    color: #000;
 }
 
 .scroll-to-top {
@@ -1391,7 +1391,7 @@ a[class*='lightcase-icon-'].lightcase-icon-close {
     top: 0;
     left: 0;
     z-index: 99999;
-    background: white;
+    background: #1D5550;
     text-align: center;
 }
 
@@ -1409,7 +1409,7 @@ a[class*='lightcase-icon-'].lightcase-icon-close {
     position: absolute;
     top: 0;
     left: 0;
-    background: #fca120;
+    background: #D2DDDD;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -1450,7 +1450,7 @@ a[class*='lightcase-icon-'].lightcase-icon-close {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    background: #fca120;
+    background: #1D5550;
     -webkit-animation: preloader-inside-red 1s ease-in-out infinite;
     -ms-animation: preloader-inside-red 1s ease-in-out infinite;
     animation: preloader-inside-red 1s ease-in-out infinite;
@@ -1951,7 +1951,7 @@ a:hover {
 }
 
 .custom--card .card-header {
-    background-color: #f6f5ef80;
+    background-color: #1D5550;
     padding: 0.625rem 1.25rem;
     border-color: #e5e5e5;
 }
@@ -2103,7 +2103,7 @@ a:hover {
 }
 
 .btn-outline--primary:hover {
-    background-color: #4634ff;
+    background-color: #6c757d;
 }
 
 .btn-outline--secondary {
@@ -3544,7 +3544,7 @@ span.is-active:after {
 
 .inner-hero .page-title {
     font-size: 36px;
-    color: #ffffff;
+    color: #000;
 }
 
 @media (max-width: 767px) {
@@ -3793,7 +3793,7 @@ span.is-active:after {
 /* testimonial section css end */
 /* dashboard section css start */
 .d-widget {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     background-color: #ffffff;
@@ -3846,14 +3846,15 @@ span.is-active:after {
 }
 
 .d-widget__caption {
-    color: #fca120;
-    font-weight: 600;
+    color: #1D5550;
+    font-weight: 800;
     margin-bottom: 6px;
+    font-size: larger;
 }
 
 .d-widget__amount {
     font-size: 24px;
-    color: #8b8b8b;
+    color: #1D5550;
     word-break: break-all;
     font-family: 'Rajdhani', sans-serif;
 }
@@ -4197,7 +4198,8 @@ span.is-active:after {
 /* trade request start css start */
 .trade-request-details-list {
     padding: 30px;
-    background-color: #f9f9f9;
+    background-color: #D2DDDD;
+    border:2px solid #1D5550;
 }
 
 .trade-request-details-list li {
@@ -4223,6 +4225,7 @@ span.is-active:after {
     font-weight: 700;
     width: 40%;
     position: relative;
+    color:#1D5550;1
 }
 
 @media (max-width: 575px) {
@@ -4248,6 +4251,7 @@ span.is-active:after {
 .trade-request-details-list li .value {
     width: 60%;
     padding-left: 20px;
+    color:#5C6867;
 }
 
 @media (max-width: 575px) {
@@ -5085,7 +5089,7 @@ span.is-active:after {
 }
 
 .text--base {
-    color: #fca120;
+    color: #5C6867;
 }
 
 .text--primary {
@@ -5097,7 +5101,7 @@ span.is-active:after {
 }
 
 .text--success {
-    color: #28c76f !important;
+    color: #000 !important;
 }
 
 .text--danger {
@@ -5356,7 +5360,7 @@ span.is-active:after {
 }
 
 .text--success {
-    color: #28c76f !important;
+    color: #000 !important;
 }
 
 .text--danger {
@@ -5738,7 +5742,7 @@ label.required:after {
     display: block;
     height: 48px;
     text-align: center;
-    background: hsl(var(--base-two)/0.08);
+    background: black;
     color:hsl(0, 100%, 0%);
     padding: 12px 10px;
     border-radius: 4px;
@@ -5757,8 +5761,8 @@ label.required:after {
 	width: 100%;
 	height: 48px;
 	padding: 12px 13px;
-	background-color: transparent;
-	border: 1px solid #eee;
+    background-color: #D2DDDD;
+        border: 1px solid #1D5550;
 	color: hsl(var(--heading-color)) !important;
 	line-height: 1;
 	font-size: 1rem;

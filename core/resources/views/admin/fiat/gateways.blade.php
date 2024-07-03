@@ -100,11 +100,11 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>@lang('Name')</label>
-                                    <input type="text" class="form-control" name="name" placeholder="@lang('Paypal')" value="{{ old('name') }}" required />
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="name" placeholder="@lang('Paypal')" value="{{ old('name') }}" required />
                                 </div>
                                 <div class="form-group">
                                     <label>@lang('Slug')</label>
-                                    <input type="text" class="form-control" name="slug" placeholder="@lang('Paypal')" value="{{ old('slug') }}" required />
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="slug" placeholder="@lang('Paypal')" value="{{ old('slug') }}" required />
                                     <code>@lang('Spaces are not allowed')</code>
                                 </div>
                                 <div class="form-group">

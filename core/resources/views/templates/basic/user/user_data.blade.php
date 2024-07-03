@@ -16,24 +16,24 @@
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label class="form-label">@lang('First Name')</label>
-                                        <input type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" required>
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="firstname" value="{{ old('firstname') }}" required>
                                     </div>
 
                                     <div class="form-group col-sm-6">
                                         <label class="form-label">@lang('Last Name')</label>
-                                        <input type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required>
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="lastname" value="{{ old('lastname') }}" required>
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label class="form-label">@lang('Address')</label>
-                                        <input type="text" class="form-control" name="address" value="{{ old('address') }}">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="address" value="{{ old('address') }}">
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label class="form-label">@lang('State')</label>
-                                        <input type="text" class="form-control" name="state" value="{{ old('state') }}">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="state" value="{{ old('state') }}">
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label class="form-label">@lang('Zip Code')</label>
-                                        <input type="text" class="form-control" name="zip" value="{{ old('zip') }}">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="zip" value="{{ old('zip') }}">
                                     </div>
 
                                     <div class="form-group col-sm-6">

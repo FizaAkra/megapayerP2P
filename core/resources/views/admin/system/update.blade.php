@@ -42,15 +42,15 @@
                         <div class="alert alert-warning p-3" role="alert">If you've made any customization on this project, please don't upload the updated file. It may raise issues.</div>
                         <div class="form-group">
                             <label>@lang('Purchase Code')</label>
-                            <input type="text" name="purchase_code" value="{{ env('PURCHASECODE') }}" class="form-control" readonly required>
+                            <input type="text" name="purchase_code" value="{{ env('PURCHASECODE') }}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" readonly required>
                         </div>
                         <div class="form-group">
                             <label>@lang('Envato Username')</label>
-                            <input type="text" name="envato_username" class="form-control" required>
+                            <input type="text" name="envato_username" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                         </div>
                         <div class="form-group">
                             <label>@lang('Files')</label>
-                            <input type="file" name="file" class="form-control" accept=".zip" required>
+                            <input type="file" name="file" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" accept=".zip" required>
                         </div>
                     </div>
                     <div class="modal-footer">

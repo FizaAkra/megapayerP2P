@@ -7,7 +7,7 @@
                     <div class="d-flex gap-3 flex-wrap align-items-end justify-content-center">
                         <div class="flex-fill">
                             <label class="float-start">@lang('TRX No.')</label>
-                            <input type="text" name="search" value="{{ request()->search }}" class="form-control" placeholder="@lang('Trannsaction No.')">
+                            <input type="text" name="search" value="{{ request()->search }}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Trannsaction No.')">
                         </div>
                         <div class="flex-fill">
                             <label class="float-start">@lang('Type')</label>

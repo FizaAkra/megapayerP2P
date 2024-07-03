@@ -16,7 +16,7 @@
                   </div>
                     <div class="form-group">
                       <label>@lang('Short Description')</label>
-                        <textarea class="form-control" rows="5" required name="short_desc">{{ @$cookie->data_values->short_desc }}</textarea>
+                        <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" rows="5" required name="short_desc">{{ @$cookie->data_values->short_desc }}</textarea>
                     </div>
                     <div class="form-group">
                       <label>@lang('Description')</label>

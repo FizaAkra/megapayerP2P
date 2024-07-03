@@ -2,7 +2,7 @@
 @section('content')
 
     @php
-        $bannerContent = getContent('banner.content', true);
+        $bannerContent = getContent('.content', true);
     @endphp
 
     <section class="hero bg_img"

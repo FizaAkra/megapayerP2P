@@ -100,12 +100,12 @@
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="key">@lang('Key')</label>
-                                <input type="text" class="form-control" id="key" name="key" value="{{old('key')}}" required>
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="key" name="key" value="{{old('key')}}" required>
 
                             </div>
                             <div class="form-group">
                                 <label for="value">@lang('Value')</label>
-                                <input type="text" class="form-control" id="value" name="value" value="{{old('value')}}" required>
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="value" name="value" value="{{old('value')}}" required>
 
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                         <div class="modal-body">
                             <div class="form-group ">
                                 <label for="inputName" class="form-title"></label>
-                                <input type="text" class="form-control" name="value" required>
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="value" required>
                             </div>
                             <input type="hidden" name="key">
                         </div>

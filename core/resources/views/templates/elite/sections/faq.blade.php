@@ -8,8 +8,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="section-heading">
-                    <h2 class="section-heading__title" s-break="-1" s-color="highlight">{{ __(@$content->data_values->heading) }}</h2>
-                    <p class="section-heading__desc">{{ __(@$content->data_values->sub_heading) }}</p>
+                    <h2 class="section-heading__title" s-break="-1" s-color="highlight" style="color:#1D5550">{{ __(@$content->data_values->heading) }}</h2>
+                    <p class="section-heading__desc"style="color:#5C6867">{{ __(@$content->data_values->sub_heading) }}</p>
                 </div>
             </div>
         </div>
@@ -20,11 +20,11 @@
                         @if ($loop->odd)
                             <div class="accordion-item">
                                 <h6 class="accordion-header" id="flush-heading-{{ $item->id }}">
-                                    <button aria-controls="flush-collapse-{{ $item->id }}" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapse-{{ $item->id }}" data-bs-toggle="collapse" type="button">
+                                    <button aria-controls="flush-collapse-{{ $item->id }}" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapse-{{ $item->id }}" data-bs-toggle="collapse" type="button"style="color:#1D5550">
                                         {{ __($item->data_values->question) }}
                                     </button>
                                 </h6>
-                                <div aria-labelledby="flush-heading-{{ $item->id }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapse-{{ $item->id }}">
+                                <div aria-labelledby="flush-heading-{{ $item->id }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapse-{{ $item->id }}"style="color:#5C6867">
                                     <div class="accordion-body">
                                         {{ __(@$item->data_values->answer) }}
                                     </div>
@@ -39,11 +39,11 @@
                         @if ($loop->even)
                             <div class="accordion-item">
                                 <h6 class="accordion-header" id="flush-heading-{{ $item->id }}">
-                                    <button aria-controls="flush-collapse-{{ $item->id }}" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapse-{{ $item->id }}" data-bs-toggle="collapse" type="button">
+                                    <button aria-controls="flush-collapse-{{ $item->id }}" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#flush-collapse-{{ $item->id }}" data-bs-toggle="collapse" type="button"style="color:#1D5550">
                                         {{ __($item->data_values->question) }}
                                     </button>
                                 </h6>
-                                <div aria-labelledby="flush-heading-{{ $item->id }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapse-{{ $item->id }}">
+                                <div aria-labelledby="flush-heading-{{ $item->id }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="flush-collapse-{{ $item->id }}"style="color:#5C6867">
                                     <div class="accordion-body">
                                         {{ __(@$item->data_values->answer) }}
                                     </div>

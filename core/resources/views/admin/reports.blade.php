@@ -47,14 +47,14 @@
         <div class="modal-body">
           <div class="form-group">
             <label>@lang('Type')</label>
-            <select class="form-control" name="type" required>
+            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="type" required>
               <option value="bug" @selected(old('type') == 'bug')>@lang('Report Bug')</option>
               <option value="feature" @selected(old('type') == 'feature')>@lang('Feature Request')</option>
             </select>
           </div>
           <div class="form-group">
             <label>@lang('Message')</label>
-            <textarea class="form-control" name="message" rows="5" required>{{ old('message') }}</textarea>
+            <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="message" rows="5" required>{{ old('message') }}</textarea>
           </div>
         </div>
         <div class="modal-footer">

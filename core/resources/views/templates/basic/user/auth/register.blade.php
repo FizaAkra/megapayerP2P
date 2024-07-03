@@ -22,7 +22,7 @@
                         @if (session()->get('reference') != null)
                             <div class="form-group col-sm-12">
                                 <label>@lang('Referred By')</label>
-                                <input class="form-control" id="referenceBy" name="referBy" readonly type="text" value="{{ session()->get('reference') }}">
+                                <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="referenceBy" name="referBy" readonly type="text" value="{{ session()->get('reference') }}">
                             </div>
                         @endif
 
@@ -39,7 +39,7 @@
 
                         <div class="form-group col-sm-6">
                             <label>@lang('Country')</label>
-                            <select class="form-control" id="country" name="country" required>
+                            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="country" name="country" required>
                                 @foreach ($countries as $key => $country)
                                     <option data-code="{{ $key }}" data-mobile_code="{{ $country->dial_code }}" value="{{ $country->country }}">{{ __($country->country) }}</option>
                                 @endforeach
@@ -67,7 +67,7 @@
 
                         <div class="form-group col-sm-6">
                             <label>@lang('Confirm Password')</label>
-                            <input class="form-control" name="password_confirmation" required type="password">
+                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="password_confirmation" required type="password">
                         </div>
                     </div>
 

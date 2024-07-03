@@ -14,7 +14,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label>@lang('Email')</label>
-                                        <input class="form-control" name="email" required type="email" value="{{ old('email') }}">
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="email" required type="email" value="{{ old('email') }}">
                                     </div>
                                     <x-captcha />
                                     <div class="d-flex flex-wrap justify-content-between">

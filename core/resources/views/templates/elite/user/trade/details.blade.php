@@ -19,69 +19,73 @@
         }
     @endphp
 
-    <div class="row ">
+    <div class="row">
         <div class="col-lg-12">
             <div class="buy-details two">
                 <div class="row">
                     <div class="col-lg-8">
-                        <div class="buy-details__left">
-                            <div class="buy-details__header">
-                                <div class="buy-details__header-top">
-                                    <div class="customer flex-align">
-                                        <div class="customer__thumb">
-                                            <img alt="" class="fit-image" src="{{ getImage($profileImage->path . '/' . @$topImage, null, true) }}">
+                        <div class="buy-details__left" style="border: 1px solid #90A3A2; border-radius: 8px; background-color: #F4F7F7;">
+                            <div class="buy-details__header" style="background-color: #1D5550; border-radius: 8px 8px 0 0; padding: 20px;">
+                                <div class="buy-details__header-top d-flex justify-content-between align-items-center">
+                                    <div class="customer d-flex align-items-center">
+                                        <div class="customer__thumb" style="margin-right: 15px;">
+                                            <img alt="" class="fit-image rounded-circle" src="{{ getImage($profileImage->path . '/' . @$topImage, null, true) }}" width="60" style="border: 2px solid #90A3A2;">
                                         </div>
                                         <div class="customer__content">
-                                            <h6 class="customer__name">{{ __($trader->fullname) }}</h6>
-                                            <span class="customer__info">{{ $trader->username }}</span>
+                                            <h6 class="customer__name text-white">{{ __($trader->fullname) }}</h6>
+                                            <span class="customer__info text-light">{{ $trader->username }}</span>
                                         </div>
                                     </div>
                                     @if($general->kv)
-                                    @if ($trader->kv == Status::KYC_VERIFIED)
-                                        <span class="kyc"><i class="fas fa-check-circle"></i> @lang('KYC Verified')</span>
-                                    @elseif($trader->kv == Status::KYC_PENDING)
-                                        <span class="kyc"><i class="fas fa-spinner text--warning"></i> @lang('KYC Pending')</span>
-                                    @else
-                                        <span class="kyc"><i class="fas fa-times text--danger"></i> @lang('KYC Unverified')</span>
+                                    <span class="kyc">
+                                        @if ($trader->kv == Status::KYC_VERIFIED)
+                                            <i class="fas fa-check-circle text-white"></i> @lang('KYC Verified')
+                                        @elseif($trader->kv == Status::KYC_PENDING)
+                                            <i class="fas fa-spinner text-warning"></i> @lang('KYC Pending')
+                                        @else
+                                            <i class="fas fa-times text-danger"></i> @lang('KYC Unverified')
+                                        @endif
+                                    </span>
                                     @endif
-                                    @endif
-                                    <span class="location"><img alt="" src="{{ getImage('assets/images/globe.png') }}"> {{ __(@$trader->address->country) }}</span>
+                                    <span class="location text-light">
+                                        <img alt="" src="{{ getImage('assets/images/globe.png') }}" style="width: 20px;"> {{ __(@$trader->address->country) }}
+                                    </span>
                                 </div>
                             </div>
-                            <div class="buy-details__chatbox-heading">
-                                <h5 class="title mb-0">@lang('Messages')</h5>
-                                <a class="text--base" href="" title="@lang('Click here to load new chat and trade current status')"><i class="las la-undo-alt"></i> @lang('Refresh')</a>
+                            <div class="buy-details__chatbox-heading d-flex justify-content-between align-items-center p-3" style="border-bottom: 1px solid #90A3A2;">
+                                <h5 class="title mb-0" style="color: #1D5550;">@lang('Messages')</h5>
+                                <a class="text--base" href="" title="@lang('Click here to load new chat and trade current status')" style="color: #1D5550;"><i class="las la-undo-alt"></i> @lang('Refresh')</a>
                             </div>
-                           @include($activeTemplate.'user.trade.partials.chat_box')
+                            <div class="p-3">
+                                @include($activeTemplate.'user.trade.partials.chat_box')
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="buy-details__right">
-                            <div class="buy-details__right-top">
+                        <div class="buy-details__right" style="border: 1px solid #90A3A2; border-radius: 8px; background-color: #F4F7F7;">
+                            <div class="buy-details__right-top p-3" style="border-bottom: 1px solid #90A3A2;">
                                 <div class="trade">
-                                    <p class="trade__desc">@lang('Trade Code'): <span class="trade__code">#{{ $trade->uid }}</span>
-                                    </p>
+                                    <p class="trade__desc">@lang('Trade Code'): <span class="trade__code">#{{ $trade->uid }}</span></p>
                                     @php echo $trade->statusBadge @endphp
                                 </div>
 
                                 @include($activeTemplate . 'user.trade.partials.alerts')
 
                                 <div class="instructions">
-                                    <h6 class="heading">@lang('Instructions to be followed')</h6>
+                                    <h6 class="heading" style="color: #1D5550;">@lang('Instructions to be followed')</h6>
                                     <div class="instruction_list">
-
-                                        <h6 class="title"> @lang('Terms of trade')</h6>
-                                        <p>{{ __($trade->advertisement->terms) }}</p>
+                                        <h6 class="title" style="color: #1D5550;">@lang('Terms of trade')</h6>
+                                        <p style="color: #5C6867;">{{ __($trade->advertisement->terms) }}</p>
                                     </div>
                                     <div class="instruction_list">
-                                        <h6 class="title">@lang('Payment details')</h6>
-                                        <p>{{ __($trade->advertisement->details) }}</p>
+                                        <h6 class="title" style="color: #1D5550;">@lang('Payment details')</h6>
+                                        <p style="color: #5C6867;">{{ __($trade->advertisement->details) }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="buy-details__right-middle">
-                                <h6 class="title">@lang('Trade Information'):</h6>
-                                <ul class="list">
+                            <div class="buy-details__right-middle p-3">
+                                <h6 class="title" style="color: #1D5550;">@lang('Trade Information'):</h6>
+                                <ul class="list" style="color: #5C6867;">
                                     <li class="list__item"><span class="title">@lang('Buyer Name'):</span> <span class="info">{{ __($trade->buyer->username) }}</span></li>
                                     <li class="list__item"><span class="title">@lang('Seller Name'):</span> <span class="info">{{ __($trade->seller->username) }}</span></li>
                                     <li class="list__item"><span class="title">@lang('Amount'):</span> <span class="info">{{ showAmount($trade->amount) }} {{ __($trade->fiat->code) }}</span></li>
@@ -98,49 +102,91 @@
         </div>
     </div>
 
-    {{-- <section class="pt-120 pb-120">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 text-center mb-4">
-                    <h3 class="mb-1">{{ $title }}</h3>
-                    <h6 class="text--base">{{ $title2 }}</h6>
-                </div>
-
-                <div class="col-lg-6 pl-lg-5 mt-lg-0 mt-5">
-                    @include($activeTemplate . 'user.trade.partials.chat_box')
-                </div>
-
-                <div class="col-lg-6 mt-lg-0 mt-4">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-sm text-muted">
-                                <span>#{{ $trade->uid }}</span>
-                            </span>
-                            <span>
-                                @php echo $trade->statusBadge @endphp
-                            </span>
-                        </div>
-                        <div class="card-body">
-                            @include($activeTemplate . 'user.trade.partials.alerts')
-                            @include($activeTemplate . 'user.trade.partials.actions')
-                            @include($activeTemplate . 'user.trade.partials.info')
-                            @include($activeTemplate . 'user.trade.partials.instructions')
-                        </div>
-                    </div>
-                </div>
-
-                @include($activeTemplate . 'user.trade.partials.review')
-
-                 @if ($trade->reviewed == 1 && $trade->advertisement->user_id != auth()->id())
-                    <div class="mt-5 alert alert-warning">
-                        @lang('You\'ve already given feedback on this advertisement.') <a href="{{ route('user.trade.request.new', $trade->advertisement->id) }}" class="text--base">@lang('View Reviews')</a>
-                    </div>
-                @endif
-            </div>
-        </div>
-    </section> --}}
 @endsection
+
+@push('style')
+    <style>
+        .buy-details__header {
+            background-color: #1D5550;
+            color: white;
+            border-radius: 8px 8px 0 0;
+            padding: 20px;
+        }
+
+        .buy-details__header-top {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .buy-details__right, .buy-details__left {
+            border-radius: 8px;
+            background-color: #F4F7F7;
+            padding: 20px;
+        }
+
+        .buy-details__chatbox-heading {
+            background-color: #F4F7F7;
+            border-bottom: 1px solid #90A3A2;
+            padding: 15px;
+        }
+
+        .title {
+            color: #1D5550;
+        }
+
+        .customer__name, .customer__info, .list__item .info, .instruction_list p {
+            color: #5C6867;
+        }
+
+        .kyc i {
+            color: white;
+        }
+
+        .kyc .fa-spinner {
+            color: #5C6867;
+        }
+
+        .kyc .fa-times {
+            color: #FF0000;
+        }
+
+        .location img {
+            width: 20px;
+        }
+
+        .text--base {
+            color: #1D5550;
+        }
+
+        .text--base:hover {
+            color: #174a44;
+        }
+
+        .list__item {
+            margin-bottom: 10px;
+        }
+
+        .list__item .title {
+            font-weight: bold;
+        }
+
+        .instructions {
+            margin-top: 20px;
+        }
+
+        .instruction_list .title {
+            font-weight: bold;
+        }
+
+        .instruction_list {
+            margin-bottom: 10px;
+        }
+
+        .trade__code {
+            font-weight: bold;
+            color: #1D5550;
+        }
+    </style>
+@endpush
 
 @push('script')
     <script>

@@ -85,21 +85,21 @@
                         <div class="row form-group">
                             <label>@lang('Language Name')</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" value="{{ old('name') }}" name="name" required>
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ old('name') }}" name="name" required>
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <label>@lang('Language Code')</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" value="{{ old('code') }}" name="code" required>
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ old('code') }}" name="code" required>
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <label>@lang('Flag')</label>
                             <div class="col-sm-12">
-                                <input type="file" class="form-control"  name="flag" required>
+                                <input type="file" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;"  name="flag" required>
                             </div>
                         </div>
 
@@ -134,14 +134,14 @@
                         <div class="form-group">
                             <label>@lang('Language Name')</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" value="{{ old('name') }}" name="name" required>
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ old('name') }}" name="name" required>
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <label>@lang('Flag')</label>
                             <div class="col-sm-12">
-                                <input type="file" class="form-control"  name="flag" required>
+                                <input type="file" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;"  name="flag" required>
                             </div>
                         </div>
 

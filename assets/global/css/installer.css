@@ -510,7 +510,7 @@ a {
 }
 
 .bg--dark {
-    background-color: #071251 !important;
+    background-color: #000 !important;
 }
 
 .passed-btn {
@@ -564,7 +564,7 @@ input::placeholder {
 }
 
 .text-danger {
-    color: #ff4111 !important;
+    color: #1D5550;
 }
 
 .icon.big {

@@ -32,7 +32,7 @@
                                                             <div class="avatar-edit">
                                                                 <input accept=".png, .jpg, .jpeg" class="profilePicUpload" id="profilePicUpload{{ $loop->index }}" name="image_input[{{ @$imgKey }}]" type="file">
                                                                 <label class="bg--primary" for="profilePicUpload{{ $loop->index }}">{{ __(keyToTitle(@$imgKey)) }}</label>
-                                                                <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png')</b>.
+                                                                <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png'),@lang('gif'),@lang('mp4')</b>.
                                                                     @if (@$section->content->images->$imgKey->size)
                                                                         | @lang('Will be resized to'):
                                                                         <b>{{ @$section->content->images->$imgKey->size }}</b>
@@ -65,7 +65,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>{{ __(keyToTitle($k)) }}</label>
-                                                        <textarea class="form-control" name="{{ $k }}" required rows="10">{{ @$content->data_values->$k }}</textarea>
+                                                        <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" required rows="10">{{ @$content->data_values->$k }}</textarea>
                                                     </div>
                                                 </div>
                                             @elseif($item == 'textarea-nic')
@@ -82,7 +82,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>{{ __(keyToTitle(@$selectName)) }}</label>
-                                                        <select class="form-control" name="{{ @$selectName }}">
+                                                        <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ @$selectName }}">
                                                             @foreach ($item->options as $selectItemKey => $selectOption)
                                                                 <option @if (@$content->data_values->$selectName == $selectItemKey) selected @endif value="{{ $selectItemKey }}">{{ $selectOption }}</option>
                                                             @endforeach
@@ -93,7 +93,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>{{ __(keyToTitle($k)) }}</label>
-                                                        <input class="form-control" name="{{ $k }}" required type="text" value="{{ @$content->data_values->$k }}" />
+                                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" required type="text" value="{{ @$content->data_values->$k }}" />
                                                     </div>
                                                 </div>
                                             @endif
@@ -238,7 +238,7 @@
                                     @elseif($k == 'select')
                                         <div class="form-group">
                                             <label>{{ keyToTitle(@$section->element->$k->name) }}</label>
-                                            <select class="form-control" name="{{ @$section->element->$k->name }}">
+                                            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ @$section->element->$k->name }}">
                                                 @foreach ($section->element->$k->options as $selectKey => $options)
                                                     <option value="{{ $selectKey }}">{{ $options }}</option>
                                                 @endforeach
@@ -259,7 +259,7 @@
                                                         <div class="avatar-edit">
                                                             <input accept=".png, .jpg, .jpeg" class="profilePicUpload" id="addImage{{ $loop->index }}" name="image_input[{{ $imgKey }}]" type="file">
                                                             <label class="bg--success" for="addImage{{ $loop->index }}">{{ __(keyToTitle($imgKey)) }}</label>
-                                                            <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png')</b>.
+                                                            <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png'),@lang('gif'),@lang('mp4')</b>.
                                                                 @if (@$section->element->images->$imgKey->size)
                                                                     | @lang('Will be resized to'): <b>{{ @$section->element->images->$imgKey->size }}</b> @lang('px').
                                                                 @endif
@@ -272,7 +272,7 @@
                                     @elseif($type == 'textarea')
                                         <div class="form-group">
                                             <label>{{ __(keyToTitle($k)) }}</label>
-                                            <textarea class="form-control" name="{{ $k }}" required rows="4"></textarea>
+                                            <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" required rows="4"></textarea>
                                         </div>
                                     @elseif($type == 'textarea-nic')
                                         <div class="form-group">
@@ -282,7 +282,7 @@
                                     @else
                                         <div class="form-group">
                                             <label>{{ __(keyToTitle($k)) }}</label>
-                                            <input class="form-control" name="{{ $k }}" required type="text" />
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" required type="text" />
                                         </div>
                                     @endif
                                 @endif
@@ -324,7 +324,7 @@
                                     @elseif($k == 'select')
                                         <div class="form-group">
                                             <label>{{ keyToTitle(@$section->element->$k->name) }}</label>
-                                            <select class="form-control" name="{{ @$section->element->$k->name }}">
+                                            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ @$section->element->$k->name }}">
                                                 @foreach ($section->element->$k->options as $selectKey => $options)
                                                     <option value="{{ $selectKey }}">{{ $options }}</option>
                                                 @endforeach
@@ -345,7 +345,7 @@
                                                         <div class="avatar-edit">
                                                             <input accept=".png, .jpg, .jpeg" class="profilePicUpload" id="fileUploader{{ $loop->index }}" name="image_input[{{ $imgKey }}]" type="file">
                                                             <label class="bg--success" for="fileUploader{{ $loop->index }}">{{ __(keyToTitle($imgKey)) }}</label>
-                                                            <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png')</b>.
+                                                            <small class="mt-2">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png'),@lang('gif'),@lang('mp4')</b>.
                                                                 @if (@$section->element->images->$imgKey->size)
                                                                     | @lang('Will be resized to'): <b>{{ @$section->element->images->$imgKey->size }}</b> @lang('px').
                                                                 @endif
@@ -358,7 +358,7 @@
                                     @elseif($type == 'textarea')
                                         <div class="form-group">
                                             <label>{{ keyToTitle($k) }}</label>
-                                            <textarea class="form-control" name="{{ $k }}" required rows="4"></textarea>
+                                            <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" required rows="4"></textarea>
                                         </div>
                                     @elseif($type == 'textarea-nic')
                                         <div class="form-group">
@@ -368,7 +368,7 @@
                                     @else
                                         <div class="form-group">
                                             <label>{{ keyToTitle($k) }}</label>
-                                            <input class="form-control" name="{{ $k }}" required type="text" />
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $k }}" required type="text" />
                                         </div>
                                     @endif
                                 @endif
@@ -386,9 +386,9 @@
         @push('breadcrumb-plugins')
             <div class="d-flex justify-content-end align-items-center flex-wrap gap-2">
                 @if ($section->element->modal)
-                    <a class="btn btn-sm btn-outline--primary addBtn" href="javascript:void(0)"><i class="las la-plus"></i>@lang('Add New')</a>
+                    <a class="btn btn-sm btn-outline--primary addBtn" href="javascript:void(0)"><i class="las la-plus" ></i>@lang('Add New')</a>
                 @else
-                    <a class="btn btn-sm btn-outline--primary" href="{{ route('admin.frontend.sections.element', $key) }}"><i class="las la-plus"></i>@lang('Add New')</a>
+                    <a class="btn btn-sm btn-outline--primary" href="{{ route('admin.frontend.sections.element', $key) }}"style="background-color:#D2DDDD; border:1px solid #1D5550; color: #1D5550"><i class="las la-plus"></i>@lang('Add New')</a>
                 @endif
             </div>
         @endpush
@@ -402,16 +402,7 @@
     @if (!empty($templates))
         <div class="form-inline float-sm-end">
             <form action="{{ route('admin.frontend.import', $key) }}" method="post">
-                <div class="input-group">
-                    @csrf
-                    <select class="form-control form-control-sm border--primary h-auto" name="tempname" required>
-                        <option value="">@lang('Select One')</option>
-                        @foreach ($templates as $template)
-                            <option value="{{ @$template['value'] }}">{{ __(keyToTitle(@$template['name'])) }}</option>
-                        @endforeach
-                    </select>
-                    <button class="input-group-text btn btn-sm btn--primary" type="submit">@lang('Import')</button>
-                </div>
+               
             </form>
         </div>
     @endif

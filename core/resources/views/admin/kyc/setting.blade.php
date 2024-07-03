@@ -22,11 +22,11 @@
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label>@lang('Label')</label>
-                                                    <input type="text" name="form_generator[form_label][]" class="form-control" value="{{ $formData->name }}" readonly>
+                                                    <input type="text" name="form_generator[form_label][]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ $formData->name }}" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>@lang('Type')</label>
-                                                    <input type="text" name="form_generator[form_type][]" class="form-control" value="{{ $formData->type }}" readonly>
+                                                    <input type="text" name="form_generator[form_type][]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ $formData->type }}" readonly>
                                                 </div>
                                                 @php
                                                     $jsonData = json_encode([

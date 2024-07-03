@@ -70,21 +70,21 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>@lang('Name')</label>
-                            <input type="text" class="form-control" name="name" placeholder="@lang('Great Britain Pound')" value="{{ old('name') }}" required />
+                            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="name" placeholder="@lang('Great Britain Pound')" value="{{ old('name') }}" required />
                         </div>
                         <div class="form-group">
                             <label>@lang('Code')</label>
-                            <input type="text" class="form-control" name="code" placeholder="@lang('GBP')" value="{{ old('code') }}" required />
+                            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="code" placeholder="@lang('GBP')" value="{{ old('code') }}" required />
                         </div>
                         <div class="form-group">
                             <label>@lang('Symbol')</label>
-                            <input type="text" class="form-control" name="symbol" placeholder="@lang('£')" value="{{ old('symbol') }}" required />
+                            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="symbol" placeholder="@lang('£')" value="{{ old('symbol') }}" required />
                         </div>
                         <div class="form-group">
                             <label>@lang('Rate')</label>
                             <div class="input-group">
                                 <span class="input-group-text">1 @lang('USD') = </span>
-                                <input class="form-control" type="number" step="any" name="rate" placeholder="@lang('0.75')" value="{{ old('rate') }}" required>
+                                <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" step="any" name="rate" placeholder="@lang('0.75')" value="{{ old('rate') }}" required>
                                 <span class="input-group-text currency-symbol"></span>
                             </div>
                         </div>

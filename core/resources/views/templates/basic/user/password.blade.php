@@ -12,7 +12,7 @@
                             <div class="form-group">
                                 <label for="password">@lang('Current Password')</label>
                                 <div class="icon-input-field">
-                                    <input type="password" class="form-control" name="current_password" required autocomplete="current-password">
+                                    <input type="password" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="current_password" required autocomplete="current-password">
                                     <i class="las la-lock"></i>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                             <div class="form-group">
                                 <label for="confirm_password">@lang('Confirm Password')</label>
                                 <div class="icon-input-field">
-                                    <input type="password" class="form-control" name="password_confirmation" required autocomplete="current-password">
+                                    <input type="password" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="password_confirmation" required autocomplete="current-password">
                                     <i class="las la-key"></i>
                                 </div>
                             </div>

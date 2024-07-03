@@ -10,14 +10,14 @@
                             <div class="col-sm-4">
                                 <div class="form-group ">
                                     <label> @lang('Site Title')</label>
-                                    <input class="form-control" name="site_name" required type="text" value="{{ $general->site_name }}">
+                                    <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="site_name" required type="text" value="{{ $general->site_name }}">
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group ">
                                     <label> @lang('Completed Trade Charge')</label>
                                     <div class="input-group">
-                                        <input class="form-control" min="0" name="trade_charge" required step="0.01" type="number" value="{{ getAmount($general->trade_charge) }}">
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" min="0" name="trade_charge" required step="0.01" type="number" value="{{ getAmount($general->trade_charge) }}">
                                         <span class="input-group-text">%</span>
                                     </div>
                                 </div>

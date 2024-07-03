@@ -172,8 +172,8 @@
                         for (a; a < parseInt(levelGenerate); a++) {
                             viewHtml += `<div class="input-group mt-4">
                                             <span class="input-group-text form-control">@lang('Level')</span>
-                                            <input name="level[]" class="form-control" type="number" readonly value="${val++}" required placeholder="Level">
-                                            <input name="percent[]" class="form-control" type="number" step=".01" required placeholder="@lang('Commission Percentage %')">
+                                            <input name="level[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" readonly value="${val++}" required placeholder="Level">
+                                            <input name="percent[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="number" step=".01" required placeholder="@lang('Commission Percentage %')">
                                             <span class="input-group-text btn btn--danger delete_desc"><i class='fa fa-times'></i></span>
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> {{ $general->siteName(__($pageTitle)) }}</title>
+    <title>{{ $general->siteName(__($pageTitle)) }}</title>
 
     @include('partials.seo')
 
@@ -16,10 +16,38 @@
     <link rel="stylesheet" href="{{ asset($activeTemplateTrue . 'css/main.css') }}">
     <link rel="stylesheet" href="{{ asset($activeTemplateTrue . 'css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset($activeTemplateTrue . 'css/color.php?color1=' . $general->base_color) }}">
+    <link rel="icon" href="{{ asset('favicon.png') }}">
 
     @stack('style-lib')
     @stack('style')
 
+    <style>
+        body {
+            background-color: #D2DDDD;
+        }
+
+        .center-animation {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .center-animation img {
+            width: 100px; /* Adjust as needed */
+            height: 100px; /* Adjust as needed */
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,6 +66,10 @@
             @include($activeTemplate . 'partials.breadcrumb')
         @endif
 
+        <div class="center-animation">
+            <img src="{{ asset('assets/images/logoIcon/favicon.png') }}" alt="Animated Image">
+        </div>
+
         @yield('content')
 
         @if (!Request::routeIs('user.register') && !Request::routeIs('user.login'))
@@ -48,18 +80,6 @@
     @php
         $cookie = App\Models\Frontend::where('data_keys', 'cookie.data')->first();
     @endphp
-
-    @if(($cookie->data_values->status == Status::ENABLE) && !\Cookie::get('gdpr_cookie'))
-        <div class="cookies-card text-center hide">
-            <div class="cookies-card__icon bg--base">
-                <i class="las la-cookie-bite"></i>
-            </div>
-            <p class="mt-4 cookies-card__content">{{ $cookie->data_values->short_desc }} <a href="{{ route('cookie.policy') }}" class="text--base" target="_blank">@lang('learn more')</a></p>
-            <div class="cookies-card__btn mt-4">
-                <a href="javascript:void(0)" class="btn btn--base w-100 policy">@lang('Allow')</a>
-            </div>
-        </div>
-    @endif
 
     <script src="{{ asset('assets/global/js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('assets/global/js/bootstrap.bundle.min.js') }}"></script>

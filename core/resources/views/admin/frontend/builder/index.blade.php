@@ -12,13 +12,13 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>@lang('Page Name')</label>
-                                        <input class="form-control" name="name" type="text" value="{{ $pdata->name }}" required>
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="name" type="text" value="{{ $pdata->name }}" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>@lang('Page Slug')</label>
-                                        <input class="form-control" name="slug" type="text" value="{{ $pdata->slug }}" required>
+                                        <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="slug" type="text" value="{{ $pdata->slug }}" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -176,12 +176,12 @@
         }
 
         .vertical li i {
-            color: #000000;
+            color: #1D5550;
             padding-right: 15px;
         }
 
         .sec-item li i {
-            color: #000000;
+            color: #FFFFFF;
             padding-right: 15px;
         }
 
@@ -194,8 +194,8 @@
             display: block;
             margin: 10px 0;
             padding: 10px;
-            color: #e0e0e0;
-            background: #7f7ff7;
+            color: #1D5550;
+            background: #D2DDDD;
             font-size: 16px;
             font-weight: 600;
         }
@@ -204,7 +204,7 @@
             margin: 10px 0;
             padding: 10px;
             color: #fff;
-            background: #2e49cc;
+            background: #90A3A2;
             font-size: 24px;
             font-weight: 600;
             display: flex;

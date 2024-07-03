@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>@lang('Sms Send Method')</label>
-                            <select name="sms_method" class="form-control" >
+                            <select name="sms_method" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" >
                                 <option value="clickatell" @if(@$general->sms_config->name == 'clickatell') selected @endif>@lang('Clickatell')</option>
                                 <option value="infobip" @if(@$general->sms_config->name == 'infobip') selected @endif>@lang('Infobip')</option>
                                 <option value="messageBird" @if(@$general->sms_config->name == 'messageBird') selected @endif>@lang('Message Bird')</option>
@@ -26,7 +26,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label >@lang('API Key') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('API Key')" name="clickatell_api_key" value="{{ @$general->sms_config->clickatell->api_key }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('API Key')" name="clickatell_api_key" value="{{ @$general->sms_config->clickatell->api_key }}"/>
                                 </div>
                             </div>
                         </div>
@@ -37,13 +37,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('Username') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Username')" name="infobip_username" value="{{ @$general->sms_config->infobip->username }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Username')" name="infobip_username" value="{{ @$general->sms_config->infobip->username }}"/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('Password') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Password')" name="infobip_password" value="{{ @$general->sms_config->infobip->password }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Password')" name="infobip_password" value="{{ @$general->sms_config->infobip->password }}"/>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label >@lang('API Key') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('API Key')" name="message_bird_api_key" value="{{ @$general->sms_config->message_bird->api_key }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('API Key')" name="message_bird_api_key" value="{{ @$general->sms_config->message_bird->api_key }}"/>
                                 </div>
                             </div>
                         </div>
@@ -65,13 +65,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('API Key') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('API Key')" name="nexmo_api_key" value="{{ @$general->sms_config->nexmo->api_key }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('API Key')" name="nexmo_api_key" value="{{ @$general->sms_config->nexmo->api_key }}"/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('API Secret') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('API Secret')" name="nexmo_api_secret" value="{{ @$general->sms_config->nexmo->api_secret }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('API Secret')" name="nexmo_api_secret" value="{{ @$general->sms_config->nexmo->api_secret }}"/>
                                 </div>
                             </div>
                         </div>
@@ -82,13 +82,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('Username') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Username')" name="sms_broadcast_username" value="{{ @$general->sms_config->sms_broadcast->username }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Username')" name="sms_broadcast_username" value="{{ @$general->sms_config->sms_broadcast->username }}"/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('Password') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Password')" name="sms_broadcast_password" value="{{ @$general->sms_config->sms_broadcast->password }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Password')" name="sms_broadcast_password" value="{{ @$general->sms_config->sms_broadcast->password }}"/>
                                 </div>
                             </div>
                         </div>
@@ -99,19 +99,19 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label >@lang('Account SID') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Account SID')" name="account_sid" value="{{ @$general->sms_config->twilio->account_sid }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Account SID')" name="account_sid" value="{{ @$general->sms_config->twilio->account_sid }}"/>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label >@lang('Auth Token') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Auth Token')" name="auth_token" value="{{ @$general->sms_config->twilio->auth_token }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Auth Token')" name="auth_token" value="{{ @$general->sms_config->twilio->auth_token }}"/>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label >@lang('From Number') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('From Number')" name="from" value="{{ @$general->sms_config->twilio->from }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('From Number')" name="from" value="{{ @$general->sms_config->twilio->from }}"/>
                                 </div>
                             </div>
                         </div>
@@ -122,13 +122,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('Username') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Username')" name="text_magic_username" value="{{ @$general->sms_config->text_magic->username }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Username')" name="text_magic_username" value="{{ @$general->sms_config->text_magic->username }}"/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label >@lang('Apiv2 Key') </label>
-                                    <input type="text" class="form-control" placeholder="@lang('Apiv2 Key')" name="apiv2_key" value="{{ @$general->sms_config->text_magic->apiv2_key }}"/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Apiv2 Key')" name="apiv2_key" value="{{ @$general->sms_config->text_magic->apiv2_key }}"/>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
                                                 <option value="post">@lang('POST')</option>
                                             </select>
                                         </span>
-                                        <input type="text" class="form-control" name="custom_api_url" value="{{ @$general->sms_config->custom->url }}" placeholder="@lang('API URL')"/>
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="custom_api_url" value="{{ @$general->sms_config->custom->url }}" placeholder="@lang('API URL')"/>
                                     </div>
                                 </div>
                             </div>
@@ -185,10 +185,10 @@
                                                 @for($i = 0; $i < count($general->sms_config->custom->headers->name); $i++)
                                                     <div class="row mt-3">
                                                         <div class="col-md-5">
-                                                            <input type="text" name="custom_header_name[]" class="form-control" value="{{ @$general->sms_config->custom->headers->name[$i] }}" placeholder="@lang('Headers Name')">
+                                                            <input type="text" name="custom_header_name[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ @$general->sms_config->custom->headers->name[$i] }}" placeholder="@lang('Headers Name')">
                                                         </div>
                                                         <div class="col-md-5">
-                                                            <input type="text" name="custom_header_value[]" class="form-control" value="{{ @$general->sms_config->custom->headers->value[$i] }}" placeholder="@lang('Headers Value')">
+                                                            <input type="text" name="custom_header_value[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ @$general->sms_config->custom->headers->value[$i] }}" placeholder="@lang('Headers Value')">
                                                         </div>
                                                         <div class="col-md-2">
                                                             <button type="button" class="btn btn--danger btn-block removeHeader h-100"><i class="las la-times"></i></button>
@@ -210,10 +210,10 @@
                                                 @for($i = 0; $i < count($general->sms_config->custom->body->name); $i++)
                                                     <div class="row mt-3">
                                                         <div class="col-md-5">
-                                                            <input type="text" name="custom_body_name[]" class="form-control" value="{{ @$general->sms_config->custom->body->name[$i] }}" placeholder="@lang('Body Name')">
+                                                            <input type="text" name="custom_body_name[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ @$general->sms_config->custom->body->name[$i] }}" placeholder="@lang('Body Name')">
                                                         </div>
                                                         <div class="col-md-5">
-                                                            <input type="text" name="custom_body_value[]" value="{{ @$general->sms_config->custom->body->value[$i] }}" class="form-control" placeholder="@lang('Body Value')">
+                                                            <input type="text" name="custom_body_value[]" value="{{ @$general->sms_config->custom->body->value[$i] }}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Body Value')">
                                                         </div>
                                                         <div class="col-md-2">
                                                             <button type="button" class="btn btn--danger btn-block removeBody h-100"><i class="las la-times"></i></button>
@@ -256,7 +256,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>@lang('Sent to') </label>
-                                    <input type="text" name="mobile" class="form-control" placeholder="@lang('Mobile')">
+                                    <input type="text" name="mobile" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Mobile')">
                                 </div>
                             </div>
                         </div>
@@ -309,10 +309,10 @@
                 var html = `
                     <div class="row mt-3">
                         <div class="col-md-5">
-                            <input type="text" name="custom_header_name[]" class="form-control" placeholder="@lang('Headers Name')">
+                            <input type="text" name="custom_header_name[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Headers Name')">
                         </div>
                         <div class="col-md-5">
-                            <input type="text" name="custom_header_value[]" class="form-control" placeholder="@lang('Headers Value')">
+                            <input type="text" name="custom_header_value[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Headers Value')">
                         </div>
                         <div class="col-md-2">
                             <button type="button" class="btn btn--danger btn-block removeHeader h-100"><i class="las la-times"></i></button>
@@ -330,10 +330,10 @@
                 var html = `
                     <div class="row mt-3">
                         <div class="col-md-5">
-                            <input type="text" name="custom_body_name[]" class="form-control" placeholder="@lang('Body Name')">
+                            <input type="text" name="custom_body_name[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Body Name')">
                         </div>
                         <div class="col-md-5">
-                            <input type="text" name="custom_body_value[]" class="form-control" placeholder="@lang('Body Value')">
+                            <input type="text" name="custom_body_value[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Body Value')">
                         </div>
                         <div class="col-md-2">
                             <button type="button" class="btn btn--danger btn-block removeBody h-100"><i class="las la-times"></i></button>

@@ -84,7 +84,7 @@
                         <div class="form-group">
                             <label class="col-md-12 control-label fw-bold">@lang('Script')</label>
                             <div class="col-md-12">
-                                <textarea name="script" class="form-control" required rows="8" placeholder="@lang('Paste your script with proper key')">{{ old('script') }}</textarea>
+                                <textarea name="script" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required rows="8" placeholder="@lang('Paste your script with proper key')">{{ old('script') }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                     html += `<div class="form-group">
                         <label class="col-md-12 control-label fw-bold">${item.title}</label>
                         <div class="col-md-12">
-                            <input name="${key}" class="form-control" placeholder="--" value="${item.value}" required>
+                            <input name="${key}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="--" value="${item.value}" required>
                         </div>
                     </div>`;
                 })

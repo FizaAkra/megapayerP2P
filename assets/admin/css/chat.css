@@ -20,7 +20,7 @@
 
 .chat-box__body {
     max-height: 500px;
-    background-color: #F7F9FC;
+    background-color: #D2DDDD;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -43,7 +43,7 @@
     min-height: 100px !important;
     border: none;
     font-size: 14px;
-    background-color: #F7F9FC;
+    background-color: ;
 }
 
 .chat-form .form--control:focus {
@@ -182,7 +182,7 @@
 
 .chat-box__body {
     scrollbar-width: thin;
-    scrollbar-color: blue orange;
+    scrollbar-color: #1D5550 #D2DDDD;
 }
 
 .chat-box__body::-webkit-scrollbar {
@@ -334,3 +334,6 @@
     opacity: 1;
     visibility: visible;
 }
+
+
+

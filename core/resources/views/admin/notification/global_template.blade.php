@@ -76,14 +76,14 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>@lang('SMS Sent From') </label>
-                                <input class="form-control" placeholder="@lang('SMS Sent From')" name="sms_from" value="{{ $general->sms_from }}" required>
+                                <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('SMS Sent From')" name="sms_from" value="{{ $general->sms_from }}" required>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>@lang('SMS Body') </label>
-                                <textarea class="form-control" rows="4" placeholder="@lang('SMS Body')" name="sms_body" required>{{ $general->sms_body }}</textarea>
+                                <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" rows="4" placeholder="@lang('SMS Body')" name="sms_body" required>{{ $general->sms_body }}</textarea>
                             </div>
                         </div>
                     </div>

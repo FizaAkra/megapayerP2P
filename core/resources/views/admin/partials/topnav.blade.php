@@ -1,5 +1,5 @@
 <!-- navbar-wrapper start -->
-<nav class="navbar-wrapper bg--dark">
+<nav class="navbar-wrapper bg--dark" style="background-color:#1D5550">
     <div class="navbar__left">
         <button type="button" class="res-sidebar-open-btn me-3"><i class="las la-bars"></i></button>
         <form class="navbar-search">
@@ -53,8 +53,9 @@
                     aria-expanded="false">
                     <span class="navbar-user">
                         <span class="navbar-user__thumb"><img
-                                src="{{ getImage('assets/admin/images/profile/'. auth()->guard('admin')->user()->image) }}"
+                                src="{{ getImage('assets/images/default.png'. auth()->guard('admin')->user()->image) }}"
                                 alt="image"></span>
+                                
                         <span class="navbar-user__info">
                             <span
                                 class="navbar-user__name">{{ auth()->guard('admin')->user()->username }}</span>
@@ -62,25 +63,57 @@
                         <span class="icon"><i class="las la-chevron-circle-down"></i></span>
                     </span>
                 </button>
-                <div class="dropdown-menu dropdown-menu--sm p-0 border-0 box--shadow1 dropdown-menu-right">
-                    <a href="{{ route('admin.profile') }}"
-                        class="dropdown-menu__item d-flex align-items-center px-3 py-2">
-                        <i class="dropdown-menu__icon las la-user-circle"></i>
-                        <span class="dropdown-menu__caption">@lang('Profile')</span>
-                    </a>
+                <style>
+        .dropdown-menu {
+            background-color: #FEFFFF;
+            border: 1px solid #1D5550;
+            box-shadow: 0 4px 8px #1D5550;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-                    <a href="{{ route('admin.password') }}"
-                        class="dropdown-menu__item d-flex align-items-center px-3 py-2">
-                        <i class="dropdown-menu__icon las la-key"></i>
-                        <span class="dropdown-menu__caption">@lang('Password')</span>
-                    </a>
+        .dropdown-menu__item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #1D5550;
+           
+        }
 
-                    <a href="{{ route('admin.logout') }}"
-                        class="dropdown-menu__item d-flex align-items-center px-3 py-2">
-                        <i class="dropdown-menu__icon las la-sign-out-alt"></i>
-                        <span class="dropdown-menu__caption">@lang('Logout')</span>
-                    </a>
-                </div>
+        .dropdown-menu__item:hover {
+            background-color: #D2DDDD;
+            color: #1D5550;
+        }
+
+        .dropdown-menu__icon {
+            font-size: 18px;
+            margin-right: 8px;
+            color: #90A3A2;
+        }
+
+        .dropdown-menu__caption {
+            font-size: 16px;
+        }
+    </style>
+
+<body>
+    <div class="dropdown-menu dropdown-menu--sm p-0 box--shadow1 dropdown-menu-right">
+        <a href="{{ route('admin.profile') }}" class="dropdown-menu__item d-flex align-items-center">
+            <i class="dropdown-menu__icon las la-user-circle"></i>
+            <span class="dropdown-menu__caption">@lang('Profile')</span>
+        </a>
+
+        <a href="{{ route('admin.password') }}" class="dropdown-menu__item d-flex align-items-center">
+            <i class="dropdown-menu__icon las la-key"></i>
+            <span class="dropdown-menu__caption">@lang('Password')</span>
+        </a>
+
+        <a href="{{ route('admin.logout') }}" class="dropdown-menu__item d-flex align-items-center">
+            <i class="dropdown-menu__icon las la-sign-out-alt"></i>
+            <span class="dropdown-menu__caption">@lang('Logout')</span>
+        </a>
+    </div>
             </li>
         </ul>
     </div>

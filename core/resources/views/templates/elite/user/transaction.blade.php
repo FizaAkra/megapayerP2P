@@ -70,7 +70,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="content">
-                                                    <h6 class="trans-title">{{ __($transaction->crypto->code) }}</h6>
+                                                    <h6 class="trans-title" style="color:#1D5550">{{ __($transaction->crypto->code) }}</h6>
                                                     <span class="time text-muted mt-2">{{ showDateTime($transaction->created_at, 'M d Y @g:i:sa') }}</span>
                                                 </div>
                                             </div>

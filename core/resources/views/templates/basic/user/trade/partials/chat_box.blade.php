@@ -66,7 +66,7 @@
                 @csrf
                 <div class="chat-send-area">
                     <div class="chat-send-field">
-                        <textarea class="form-control" id="chat-message-field" name="message" placeholder="@lang('Type here')" required></textarea>
+                        <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="chat-message-field" name="message" placeholder="@lang('Type here')" required></textarea>
                     </div>
                     <div class="d-flex flex-wrap justify-content-between align-items-center w-100">
                         <div class="chat-send-file">

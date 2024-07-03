@@ -60,12 +60,12 @@
                 <div class="upload-img">
                     <input accept=".png, .jpg, .jpeg" class="imgUpload" id="image" name="file" type="file">
                     <label for="image">
-                        <img alt="" src="{{ getImage('assets/images/chat-img.png') }}">
+                        <img alt="" src="{{ getImage('assets/images/logoIcon/chat-img.png') }}" >
                     </label>
                 </div>
                 <div class="form-group">
                     <textarea class="form--control" name="message" placeholder="@lang('Type a message')..." required></textarea>
-                    <button class="send" type="submit"><img alt="" src="{{ getImage('assets/images/chat-send.png') }}"></button>
+                    <button class="send" type="submit"><img alt="" src="{{ getImage('assets/images/logoIcon/chat-send.png') }}" style="height:40px; width:40px;"></button>
                 </div>
             </div>
             <div class="file-preview d-none"></div>

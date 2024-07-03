@@ -17,7 +17,7 @@
                                     @csrf
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="code" placeholder="@lang('Enter Google Authenticator Code')">
+                                            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="code" placeholder="@lang('Enter Google Authenticator Code')">
                                         </div>
                                         <button type="submit" class="btn btn--base w-100">
                                             @lang('Submit')
@@ -31,7 +31,7 @@
                     <div class="col-md-7">
                         <div class="card">
                             <div class="card-header bg-dark">
-                                <h5 class="card-title m-0 text-white text-center">@lang('Google Authenticator')</h5>
+                                <h5 class="card-title m-0 text-white text-center" style="background-color:#1D5550">@lang('Google Authenticator')</h5>
                             </div>
                             <div class="card-body">
                                 <div class="form-group mx-auto text-center">
@@ -57,7 +57,7 @@
 
                     <div class="col-md-5">
                         <div class="card custom--card">
-                            <div class="card-header bg-dark">
+                            <div class="card-header bg-dark"style="background-color:#1D5550">
                                 <h5 class="card-title m-0 text-white text-center">@lang('Enable 2FA Security')</h5>
                             </div>
                             <div class="card-body">
@@ -67,7 +67,7 @@
                                     <div class="form-group">
                                         <label class="form-label">@lang('Google Authenticatior Code')</label>
                                         <input type="hidden" name="key" value="{{ $secret }}">
-                                        <input type="text" class="form-control" name="code" required>
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="code" required>
                                     </div>
                                     <button type="submit" class="btn btn--base w-100">
                                         @lang('Submit')

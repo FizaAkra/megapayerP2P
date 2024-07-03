@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="ptable-header-left">
-                    <h3 class="title mb-0">{{ __($pageTitle) }}</h3>
+                    <h3 class="title mb-0" style="color:#1D5550">{{ __($pageTitle) }}</h3>
                     @stack('subtitle')
                 </div>
             </div>

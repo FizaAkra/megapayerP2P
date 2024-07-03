@@ -69,7 +69,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label>@lang('Subject')</label>
-                                    <input type="text" class="form-control" placeholder="@lang('Email subject')" name="subject" value="{{ $template->subj }}" required/>
+                                    <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Email subject')" name="subject" value="{{ $template->subj }}" required/>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -111,7 +111,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>@lang('Message')</label>
-                                    <textarea name="sms_body" rows="10" class="form-control" placeholder="@lang('Your message using short-codes')" required>{{ $template->sms_body }}</textarea>
+                                    <textarea name="sms_body" rows="10" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Your message using short-codes')" required>{{ $template->sms_body }}</textarea>
                                 </div>
                             </div>
                         </div>

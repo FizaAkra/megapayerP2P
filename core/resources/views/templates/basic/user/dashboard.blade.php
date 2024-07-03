@@ -102,7 +102,7 @@
                                         <div class="d-widget__content">
                                             <p class="d-widget__caption">{{ __($wallet->cryptoCode) }} </p>
                                             <h2 class="d-widget__amount">{{ showAmount($wallet->balance, 8) }}</h2>
-                                            <h6 class="d-widget__usd text--base">
+                                            <h6 class="d-widget__usd text--base" style="color:#5C6867">
                                                 @lang('In USD') <i class="las la-arrow-right"></i> {{ showAmount($wallet->balanceInUsd) }}
                                             </h6>
                                         </div>
@@ -150,6 +150,13 @@
             font-size: 15px;
             margin-top: 5px;
         }
+        
+
+.text--base {
+    color: #5C6867;
+    text-decoration: none;
+    font-weight: 600;
+}
     </style>
 @endpush
 

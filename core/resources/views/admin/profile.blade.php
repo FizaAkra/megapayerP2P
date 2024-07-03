@@ -54,7 +54,7 @@
                                             <div class="avatar-edit">
                                                 <input type="file" class="profilePicUpload" name="image" id="profilePicUpload1" accept=".png, .jpg, .jpeg">
                                                 <label for="profilePicUpload1" class="bg--primary">@lang('Upload Image')</label>
-                                                <small class="mt-2  ">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png').</b> @lang('Image will be resized into 400x400px') </small>
+                                                <small class="mt-2  ">@lang('Supported files'): <b>@lang('jpeg'), @lang('jpg'), @lang('png'),@lang('gif'),@lang('mp4').</b> @lang('Image will be resized into 400x400px') </small>
                                             </div>
                                         </div>
                                     </div>
@@ -63,12 +63,12 @@
                             <div class="col-xl-6 col-lg-12 col-md-6">
                                 <div class="form-group ">
                                     <label>@lang('Name')</label>
-                                    <input class="form-control" type="text" name="name" value="{{ $admin->name }}" required>
+                                    <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="name" value="{{ $admin->name }}" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>@lang('Email')</label>
-                                    <input class="form-control" type="email" name="email" value="{{ $admin->email }}" required>
+                                    <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="email" name="email" value="{{ $admin->email }}" required>
                                 </div>
                             </div>
                         </div>

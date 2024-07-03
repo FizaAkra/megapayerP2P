@@ -65,7 +65,7 @@
     --base-l-700: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.7);
     --base-l-800: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.8);
     --base-l-900: var(--base-h) calc(var(--base-s)) calc(var(--base-l) + (100% - var(--base-l)) * 0.9);
-    --background-gradient: linear-gradient(45deg, hsl(var(--base)), hsl(var(--base-two)));
+    --background-gradient: linear-gradient(45deg, #000, hsl(var(--base-two)));
     /* ========================= Base Two Color ============================= */
     --base-two-h: 46;
     --base-two-s: 91%;
@@ -301,7 +301,7 @@ a {
 }
 
 a:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 img {
@@ -620,7 +620,7 @@ body {
 }
 
 .section-heading__title .highlight {
-    color:hsl(0, 100%, 0%);
+    color: #6c757d;
 }
 
 .section-heading__desc {
@@ -671,11 +671,11 @@ body {
 /* ====================== Section Heading En d==================== */
 /* ================================= Background Color Css Start =========================== */
 .bg--base {
-    background-color: hsl(var(--base)) !important;
+    background-color: #1D5550;
 }
 
 .bg--base-two {
-    background-color: hsl(var(--base-two)) !important;
+    background-color: #1D5550
 }
 
 .bg--primary {
@@ -705,7 +705,7 @@ body {
 /* ================================= Background Color Css End =========================== */
 /* ================================= Color Css Start =========================== */
 .text--base {
-    color: hsl(var(--base)) !important;
+    color: #5C6867
 }
 
 .text--primary {
@@ -717,15 +717,17 @@ body {
 }
 
 .text--success {
-    color: hsl(var(--success)) !important;
+    color: #1D5550;
 }
 
 .text--danger {
-    color: hsl(var(--danger)) !important;
+    color: #1D5550;
+    font-size: unset;
+    font-weight: bold;
 }
 
 .text--warning {
-    color: hsl(var(--warning)) !important;
+    color: #1D5550;
 }
 
 .text--info {
@@ -1002,7 +1004,7 @@ body {
 /* ================================= padding Css End =========================== */
 /* ================================= Border Color Css Start =========================== */
 .border--base {
-    border-color: hsl(var(--base)) !important;
+    border-color: #000 !important;
 }
 
 .border--primary {
@@ -1130,7 +1132,7 @@ body {
 
 .custom--accordion .accordion-button:not(.collapsed)::after {
     background-image: none;
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .custom--accordion .accordion-button[aria-expanded=true]::after,
@@ -1204,12 +1206,12 @@ body {
 .table--acordion .left .icon {
     width: 2rem;
     height: 2rem;
-    background-color: hsl(var(--base-two)/0.15);
+    background-color: #D2DDDD;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    color:hsl(0, 100%, 0%);
+    color:#1D5550;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -1360,7 +1362,7 @@ body {
 }
 
 .btn {
-    color: hsl(var(--white)) !important;
+    
     font-weight: 500;
     padding: 14px 29px;
     border-radius: 4px;
@@ -1482,36 +1484,40 @@ body {
 }
 
 .btn--base {
-    background-color: hsl(var(--base)) !important;
+    background-color: #1D5550;
+    color:white;
 }
 
 .btn--base:hover,
 .btn--base:focus .btn--base:focus-visible {
-    background-color: hsl(var(--base-d-200)) !important;
-    border: 1px solid hsl(var(--base-d-200)) !important;
+    background-color: #1D5550;
+        border: #D2DDDD;
+        color:white;
 }
 
 .btn-outline--base {
     background-color: transparent !important;
-    border: 1px solid hsl(var(--base)) !important;
-    color: hsl(var(--base)) !important;
+    border: 1px solid #000 !important;
+        color: #000 !important;
 }
 
 .btn-outline--base:hover,
 .btn-outline--base:focus .btn-outline--base:focus-visible {
-    background-color: hsl(var(--base)) !important;
+    background-color: #000 !important;
     color: hsl(var(--white)) !important;
 }
 
 .btn--base-two {
-    border: 1px solid hsl(var(--heading-color)) !important;
-    background-color: hsl(var(--heading-color)) !important;
+    background-color: #1D5550;
+        border: #1D5550;
+        color:white;
 }
 
 .btn--base-two:hover,
 .btn--base-two:focus .btn--base-two:focus-visible {
-    background-color: hsl(var(--base-d-200)) !important;
-    border: 1px solid hsl(var(--base-d-200)) !important;
+    background-color: #90A3A2;
+        border: 1px solid #1D5550;
+        color:white;
 }
 
 .btn-outline--base-two {
@@ -1579,13 +1585,15 @@ body {
 }
 
 .btn--success {
-    background-color: hsl(var(--success)) !important;
+    background-color: #1D5550;
+    color:white;
 }
 
 .btn--success:hover,
 .btn--success:focus .btn--success:focus-visible {
-    background-color: hsl(var(--success-d-200)) !important;
-    border: 1px solid hsl(var(--success-d-200)) !important;
+    background-color: #1D5550;
+    border: 1px solid #D2DDDD;
+    color:white;
 }
 
 .btn-outline--success {
@@ -1623,13 +1631,15 @@ body {
 }
 
 .btn--warning {
-    background-color: hsl(var(--warning)) !important;
+    background-color: #1D5550;
+    color:white;
 }
 
 .btn--warning:hover,
 .btn--warning:focus .btn--warning:focus-visible {
-    background-color: hsl(var(--warning-d-200)) !important;
-    border: 1px solid hsl(var(--warning-d-200)) !important;
+    background-color: #1D5550;
+        border: 1px solid #90A3A2;
+        color:white;
 }
 
 .btn-outline--warning {
@@ -1667,15 +1677,16 @@ body {
 }
 
 .btn--light {
-    background-color: hsl(var(--border-color)/0.2) !important;
-    border: 1px solid transparent !important;
-    color: hsl(var(--heading-color)) !important;
+    background-color: #90A3A2;
+        border: 1px solid #1D5550 !important;
+        color: #FEFFFF;
 }
 
 .btn--light:hover,
 .btn--light:focus .btn--light:focus-visible {
-    background-color: hsl(var(--border-color)/0.4) !important;
-    border: 1px solid transparent !important;
+    background-color: #90A3A2;
+        border: 1px solid #D2DDDD !important;
+        color:white;
 }
 
 .btn-outline--light {
@@ -1727,7 +1738,7 @@ body {
 /* Form Label */
 .form--label {
     margin-bottom: 8px;
-    color: hsl(var(--heading-color));
+    color: #1D5550;
     font-weight: 400;
 }
 
@@ -1747,7 +1758,7 @@ body {
 }
 
 .select:focus {
-    border-color: hsl(var(--base));
+    border-color: #000;
     color: hsl(var(--black)) !important;
 }
 
@@ -1762,9 +1773,9 @@ body {
     width: 100%;
     height: 48px;
     padding: 12px 13px;
-    background-color: transparent;
-    border: 1px solid hsl(var(--border-color));
-    color: hsl(var(--heading-color)) !important;
+    background-color: #D2DDDD;
+        border: 1px solid #1D5550;
+        color: hsl(var(--heading-color));
     line-height: 1;
     font-size: 1rem;
 }
@@ -1796,7 +1807,7 @@ body {
     border-radius: 5px;
     color: hsl(var(--black));
     box-shadow: none;
-    border-color: hsl(var(--base));
+    border-color: #000;
     background-color: transparent;
 }
 
@@ -1824,7 +1835,7 @@ body {
     border: 1px solid hsl(var(--black)/0.08);
     padding: 4px 6px;
     border-radius: 0.2em;
-    background-color: hsl(var(--base)) !important;
+    background-color: #000 !important;
     transition: 0.2s linear;
     line-height: 25px;
     position: relative;
@@ -1833,8 +1844,9 @@ body {
 }
 
 .form--control[type=file]::file-selector-button:hover {
-    background-color: hsl(var(--base));
-    border: 1px solid hsl(var(--base));
+    background-color: #000;
+        border: 1px solid hsla(0, 0%, 13%, 1);
+        ;
     color: hsl(var(--black));
 }
 
@@ -1908,8 +1920,8 @@ input[type=number] {
 }
 
 .form--check .form-check-input:checked {
-    background-color: hsl(var(--base)) !important;
-    border-color: hsl(var(--base)) !important;
+    background-color: #000 !important;
+        border-color: #000 !important;
     box-shadow: none;
 }
 
@@ -1964,7 +1976,7 @@ input[type=number] {
 
 .form--radio .form-check-input:checked {
     background-color: transparent;
-    border-color: hsl(var(--base));
+    border-color: #000;
 }
 
 .form--radio .form-check-input:checked[type=radio] {
@@ -1980,7 +1992,7 @@ input[type=number] {
     transform: translate(-50%, -50%);
     width: 7px;
     height: 7px;
-    background-color: hsl(var(--base));
+    background-color: #000;
     border-radius: 50%;
     z-index: 999;
 }
@@ -2032,7 +2044,7 @@ input[type=number] {
 }
 
 .form--switch .form-check-input:checked {
-    background-color: hsl(var(--base)) !important;
+    background-color: #000 !important;
 }
 
 .form--switch .form-check-input:checked::before {
@@ -2153,8 +2165,8 @@ input[type=number] {
 
 .custom--modal .modal-icon i {
     font-size: 2rem;
-    color: hsl(var(--base));
-    border: 3px solid hsl(var(--base));
+    color: #000;
+        border: 3px solid #000;
     width: 50px;
     height: 50px;
     display: flex;
@@ -2359,14 +2371,14 @@ input[type=number] {
 
 .table thead tr th {
     padding: 15px 15px;
-    color: hsl(var(--border-color));
+    color: #D2DDDD;
     font-family: var(--heading-font);
     font-size: 0.875rem;
     font-weight: 400;
     border-bottom: 0;
     max-width: 170px;
     border: 0;
-    background-color: hsl(var(--border-color)/0.2);
+    background-color: #1D5550;
     text-align: center;
 }
 
@@ -2680,8 +2692,8 @@ input[type=number] {
 }
 
 .custom--tab .nav-item .nav-link:hover {
-    color: hsl(var(--base));
-    border-color: hsl(var(--base)) !important;
+    color: #000;
+        border-color: #000 !important;
 }
 
 /* ================================= Tab Css End =========================== */
@@ -2689,10 +2701,10 @@ input[type=number] {
 .badge {
     border-radius: 5px;
     padding: 7px 12px;
-    font-weight: 400;
+    font-weight: 600;
     position: relative;
     text-align: center;
-    background-color: hsl(var(--border-color)/0.08) !important;
+    background-color: #D2DDDD;
 }
 
 @media screen and (max-width: 575px) {
@@ -2724,12 +2736,12 @@ input[type=number] {
 }
 
 .badge--base {
-    color: hsl(var(--base)) !important;
+    color: #000 !important;
 }
 
 .badge--base.two {
     background-color: hsl(var(--base)/0.08) !important;
-    border: 1px solid hsl(var(--base)) !important;
+    border: 1px solid #000 !important;
     font-size: 0.875rem;
 }
 
@@ -2784,7 +2796,7 @@ input[type=number] {
 }
 
 .badge--success {
-    color: hsl(var(--success)) !important;
+    color: #1D5550
 }
 
 .badge--success.two {
@@ -2814,7 +2826,7 @@ input[type=number] {
 }
 
 .badge--warning {
-    color: hsl(var(--warning)) !important;
+    color: #1D5550
 }
 
 .badge--warning.two {
@@ -2851,6 +2863,7 @@ input[type=number] {
     font-weight: 400;
     padding: 17px 24px;
     border-radius: 5px;
+    border:3px solid #1D5550;
 }
 
 @media screen and (max-width: 991px) {
@@ -2923,7 +2936,7 @@ input[type=number] {
     bottom: -5px;
     width: 100%;
     height: 1px;
-    background-color: hsl(var(--base));
+    background-color: #000;
     visibility: hidden;
     opacity: 0;
     transition: 0.2s ease-in-out;
@@ -2934,7 +2947,7 @@ input[type=number] {
 }
 
 .alert--base .alert__icon {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .alert--primary {
@@ -3008,7 +3021,7 @@ input[type=number] {
 .loader-p:before,
 .loader-p:after {
     content: "";
-    border: 1em solid hsl(var(--base));
+    border: 1em solid #000;
     border-radius: 50%;
     width: inherit;
     height: inherit;
@@ -3073,7 +3086,7 @@ input[type=number] {
 .header {
     position: relative;
     z-index: 5;
-    background-color: hsl(var(--black));
+    background-color: #1D5550;
 }
 
 @media screen and (max-width: 1199px) {
@@ -3133,7 +3146,7 @@ input[type=number] {
 }
 
 .header.fixed-header {
-    background-color: hsl(var(--black));
+    background-color: #1D5550;
     position: sticky;
     transition: 0.3s linear;
     top: 0px;
@@ -3174,7 +3187,7 @@ input[type=number] {
     }
 
     .nav-menu .nav-item:hover .nav-link {
-        color: hsl(var(--base)) !important;
+        color: white;
     }
 
     .nav-menu .nav-item:hover .nav-link .nav-item__icon {
@@ -3193,7 +3206,8 @@ input[type=number] {
     }
 
     .nav-menu .nav-item .nav-link.active {
-        color: hsl(var(--base)) !important;
+        color: white;
+            font-size: bold;
     }
 
     .nav-menu .nav-item .nav-link.active::before {
@@ -3230,7 +3244,7 @@ input[type=number] {
         overflow: hidden;
         border-radius: 0;
         min-width: 230px;
-        background-color: hsl(var(--black));
+        background-color: #D2DDDD;
         position: relative;
     }
 
@@ -3241,7 +3255,7 @@ input[type=number] {
         top: -1px;
         width: 0;
         height: 3px;
-        background-color: hsl(var(--base));
+        background-color: #D2DDDD;
         transition: 0.3s;
     }
 
@@ -3250,13 +3264,13 @@ input[type=number] {
         font-weight: 500;
         font-size: 1rem;
         transition: 0.3s;
-        color: hsl(var(--white));
+        color: #1D5550;
     }
 
     .dropdown-menu__link:focus,
     .dropdown-menu__link:hover {
-        color: hsl(var(--white));
-        background-color: hsl(var(--white)/0.1);
+        color: #1D5550;
+            background-color: #90A3A2;
     }
 }
 
@@ -3316,7 +3330,7 @@ input[type=number] {
     }
 
     .nav-item .nav-link.show[aria-expanded=true] {
-        color: hsl(var(--base)) !important;
+        color: white;
     }
 
     .nav-item .nav-link.show[aria-expanded=true] i {
@@ -3388,8 +3402,8 @@ input[type=number] {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: hsl(var(--white)/0.1);
-    color: hsl(var(--white));
+    background: #D2DDDD;
+        color: #1D5550;
     font-size: 1.125rem;
     display: inline-flex;
     align-items: center;
@@ -3404,7 +3418,7 @@ input[type=number] {
 }
 
 .header-right__button:hover {
-    color:hsl(0, 100%, 0%);
+    color: #1D5550;
 }
 
 .header-right .wallet-wrapper {
@@ -3462,8 +3476,8 @@ input[type=number] {
     overflow: hidden;
     border-radius: 0;
     min-width: 260px;
-    background-color: hsl(var(--dark));
-    border-top: 1px solid hsl(var(--white));
+    background-color: #90A3A2;
+        border-top: 1px solid #1D5550;
 }
 
 .header-right .wallet-wrapper .wallet-list.show {
@@ -3487,11 +3501,11 @@ input[type=number] {
 }
 
 .header-right .wallet-wrapper .wallet-list__link:hover {
-    color: hsl(var(--base));
+    color: #1D5550;
 }
 
 .header-right .wallet-wrapper .wallet-list__link:hover::after {
-    color: hsl(var(--base));
+    color: white;
 }
 
 .header-right .wallet-wrapper .wallet-list__link::after {
@@ -3592,7 +3606,7 @@ input[type=number] {
 }
 
 .header-right .notification-wrapper .notification-popup .notification-header a.view-all {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .header-right .notification-wrapper .notification-popup .notification-list {
@@ -3669,7 +3683,7 @@ input[type=number] {
 }
 
 .header-right .account-wrapper .account-popup.authenticated {
-    padding: 20px 0 0 !important;
+    background-color: #90A3A2;
 }
 
 @media screen and (max-width: 1199px) {
@@ -3700,7 +3714,9 @@ input[type=number] {
 }
 
 .header-right .account-wrapper .account-popup .account-header .badge.badge--warning {
-    background-color: hsl(var(--warning)) !important;
+    background-color: #D2DDDD;
+        color: #1D5550;
+        border: #1D5550;
 }
 
 .header-right .account-wrapper .account-popup .account-header .badge.badge--secondary {
@@ -3716,8 +3732,8 @@ input[type=number] {
 }
 
 .header-right .account-wrapper .account-popup .account-list {
-    border-top: 1px solid hsl(var(--white)/0.6);
-    border-bottom: 1px solid hsl(var(--white)/0.6);
+    border-top: 1px solid #1D5550;
+        border-bottom: 1px solid #1D5550;
     padding: 25px 25px 10px;
 }
 
@@ -3729,13 +3745,13 @@ input[type=number] {
 .header-right .account-wrapper .account-popup .account-list__link {
     position: relative;
     display: block;
-    color: hsl(var(--white));
+    color: #FEFFFF;
     font-size: 1rem;
     font-weight: 400;
 }
 
 .header-right .account-wrapper .account-popup .account-list__link:hover {
-    color:hsl(0, 100%, 0%);
+    color: #1D5550;
 }
 
 .header-right .account-wrapper .account-popup .logout-btn {
@@ -3747,7 +3763,7 @@ input[type=number] {
 }
 
 .header-right .account-wrapper .account-popup .logout-btn:hover {
-    color: hsl(var(--warning));
+    color: white;
 }
 
 .header-right .language-wrapper {
@@ -3822,7 +3838,7 @@ input[type=number] {
 }
 
 .header-right .language-wrapper .language-list__link:hover {
-    color: hsl(var(--base));
+    color: white;
 }
 
 .dropdown_select {
@@ -4113,7 +4129,7 @@ input[type=number] {
 }
 
 .footer-menu__link:hover {
-    color: hsl(var(--base));
+    color: white;
     text-decoration: underline;
 }
 
@@ -4129,7 +4145,7 @@ input[type=number] {
 
 .footer-contact-menu__item-icon {
     width: 15px;
-    color: hsl(var(--base));
+    color: white;
     font-size: 1.25rem;
 }
 
@@ -4192,8 +4208,8 @@ input[type=number] {
     position: fixed;
     right: 30px;
     bottom: 30px;
-    color: hsl(var(--white));
-    background-color: hsl(var(--base));
+    color: #fff;
+        background-color: #1D5550;
     width: 40px;
     height: 40px;
     display: flex;
@@ -4204,6 +4220,7 @@ input[type=number] {
     transition: 0.5s;
     cursor: pointer;
     visibility: hidden;
+    border: 2
     opacity: 0;
     bottom: -50px;
     animation: scroll_top 5s linear infinite;
@@ -4219,7 +4236,7 @@ input[type=number] {
 
 .scroll-top:hover {
     color: hsl(var(--white));
-    background-color: hsl(var(--base-d-100));
+    background-color: #1D5550;
 }
 
 .scroll-top.show {
@@ -4278,9 +4295,10 @@ input[type=number] {
 .social-list__link.active,
 .social-list__link:hover,
 .social-list__link:focus {
-    background-color: hsl(var(--base));
+    background-color: #D2DDDD;
     color: hsl(var(--white)) !important;
-    border-color: hsl(var(--base)) !important;
+    border-color: #1D5550;
+        ;
 }
 
 .social-list__link.facebook {
@@ -4369,7 +4387,7 @@ input[type=number] {
 }
 
 .breadcrumb__item-text {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .breadcrumb__link {
@@ -4378,7 +4396,7 @@ input[type=number] {
 }
 
 .breadcrumb__link:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 /* ====================== Breadcrumb Css End ==================== */
@@ -4401,7 +4419,7 @@ input[type=number] {
 }
 
 .ptable-filter .form-group .form--control {
-    color: hsl(var(--body-color));
+    color: #1D5550;
     box-sizing: border-box;
     height: 48px;
 }
@@ -4418,42 +4436,42 @@ input[type=number] {
 
 .ptable-filter .form-group .form--control.select {
     font-size: 0.875rem;
-    color: hsl(var(--heading-color)) !important;
+    color: #1D5550;
 }
 
 .ptable-filter .form-group .form--control.datepicker-here {
     font-size: 0.875rem;
-    color: hsl(var(--heading-color)) !important;
+    color: #1D5550;
 }
 
 .ptable-filter .form-group .form--control.datepicker-here::placeholder {
     font-size: 0.875rem;
-    color: hsl(var(--heading-color)) !important;
+    color: #1D5550;
 }
 
 .ptable-filter .form-group .form--control.datepicker-here::-moz-placeholder {
     font-size: 0.875rem;
-    color: hsl(var(--heading-color)) !important;
+    color: #D2DDDD;
 }
 
 .ptable-filter .form-group .form--control.datepicker-here::-webkit-placeholder {
     font-size: 0.875rem;
-    color: hsl(var(--heading-color)) !important;
+    color: #D2DDDD;
 }
 
 .ptable-filter .form-group .form--control::placeholder {
     font-size: 0.875rem;
-    color: hsl(var(--body-color));
+    color:#D2DDDD;
 }
 
 .ptable-filter .form-group .form--control::-moz-placeholder {
     font-size: 0.875rem;
-    color: hsl(var(--body-color));
+    color: #D2DDDD;
 }
 
 .ptable-filter .form-group .form--control::-webkit-placeholder {
     font-size: 0.875rem;
-    color: hsl(var(--body-color));
+    color: #D2DDDD;
 }
 
 .ptable-filter .form-group .form--label {
@@ -4656,6 +4674,8 @@ input[type=number] {
     padding-left: 24px;
     padding-right: 24px;
     height: 100%;
+    border: 3px solid #1D5550;
+    box-shadow: 0 4px 8px #1D5550;
 }
 
 @media screen and (max-width: 767px) {
@@ -4832,7 +4852,7 @@ input[type=number] {
 
 .buy-details__header-top .kyc i {
     font-size: 0.875rem;
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .buy-details__header-top .location {
@@ -4848,7 +4868,7 @@ input[type=number] {
 
 .buy-details__header-top .location i {
     font-size: 0.875rem;
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .buy-details__header-top .location img {
@@ -4871,7 +4891,7 @@ input[type=number] {
 
 .buy-details__header-top .like i {
     font-size: 0.875rem;
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .buy-details__header-top .like img {
@@ -4928,7 +4948,7 @@ input[type=number] {
 .buy-details__header-middle .info .price {
     font-size: 0.875rem;
     font-weight: 500;
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .buy-details__header-middle .info .limit {
@@ -5005,7 +5025,7 @@ input[type=number] {
     position: absolute;
     top: 2px;
     left: 0;
-    color: hsl(var(--base));
+    color: #000;
     margin-right: 5px;
 }
 
@@ -5109,7 +5129,7 @@ input[type=number] {
 
 
 .buy-details__right .buttons {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 @media screen and (max-width: 374px) {
@@ -5175,6 +5195,7 @@ input[type=number] {
 
 .buy-details__right .buttons .btn {
     border-radius: 3px;
+    padding:10px;
 }
 
 .buy-details__right-top {
@@ -5264,7 +5285,7 @@ input[type=number] {
 .buy-details__right-top .payment__amount {
     font-size: 0.875rem;
     font-weight: 600;
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .buy-details__right-top .payment__method {
@@ -5311,7 +5332,7 @@ input[type=number] {
 }
 
 .datepickers-container .datepicker .datepicker--content .datepicker--day-name {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .datepickers-container .datepicker .datepicker--content .datepicker--cell.-current-,
@@ -6020,7 +6041,7 @@ input[type=number] {
 
 .author {
     position: relative;
-    padding-left: 95px;
+    padding-right: 95px;
     margin-bottom: 40px;
 }
 
@@ -6137,7 +6158,7 @@ input[type=number] {
 }
 
 .author__edit:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 @media screen and (max-width: 374px) {
@@ -6235,7 +6256,7 @@ input[type=number] {
 
 .author-details__info .copy:hover,
 .author-details__info .edit:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 /* =========================== Account Setting Banner Section End ========================= */
@@ -6312,7 +6333,7 @@ input[type=number] {
 .dashboard .dashboard-header .bd-btn {
     padding: 10px 25px;
     background-color: hsl(var(--base)/0.1);
-    color: hsl(var(--base));
+    color: #000;
     border-radius: 5px;
     font-weight: 600;
 }
@@ -6416,12 +6437,12 @@ input[type=number] {
 }
 
 .dashboard .user-info .user-info-dropdown__link.active {
-    background-color: hsl(var(--base));
+    background-color: #000;
 }
 
 .dashboard .user-info .user-info-dropdown__link:hover {
     background-color: hsl(var(--base)/0.08);
-    color: hsl(var(--base)) !important;
+    color: #000 !important;
 }
 
 .dashboard .user-info .user-info-dropdown__link .icon {
@@ -6509,7 +6530,7 @@ input[type=number] {
     width: 50px;
     height: 50px;
     background-color: hsl(var(--base)/0.08);
-    color: hsl(var(--base));
+    color: #000;
     border-radius: 5px;
     font-size: 1.5rem;
 }
@@ -6556,7 +6577,7 @@ input[type=number] {
 
 .dashboard .dashboard-widget-wrapper div[class*=col]:nth-of-type(7n+1) .dashboard-widget__icon {
     background-color: hsl(var(--base)/0.1);
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .dashboard .dashboard-widget-wrapper div[class*=col]:nth-of-type(7n+2) .dashboard-widget__icon {
@@ -6664,7 +6685,7 @@ input[type=number] {
 }
 
 .banner-content__title span {
-    color:hsl(0, 100%, 0%);
+    color: #6c757d;
 }
 
 @media screen and (max-width: 374px) {
@@ -6704,7 +6725,7 @@ input[type=number] {
 }
 
 .ptable-header-left .buy-sell-tab {
-    border: 1px solid hsl(var(--base));
+    border: 1px solid hsla(0, 0%, 13%, 1);
     border-radius: 5px;
     display: inline-flex;
     margin-bottom: 0;
@@ -6738,7 +6759,7 @@ input[type=number] {
 
 .ptable-header-left .buy-sell-tab__link {
     border: 0 !important;
-    color: hsl(var(--heading-color)) !important;
+    color: #1D5550;
     font-size: 0.9375rem;
     font-weight: 500;
     background-color: transparent !important;
@@ -6750,7 +6771,7 @@ input[type=number] {
 
 .ptable-header-left .buy-sell-tab__link.active {
     color: hsl(var(--white)) !important;
-    background-color: hsl(var(--base)) !important;
+    background-color: #1D5550 !important;
 }
 
 .ptable-header-left .buy-sell-tab__link.active.sell {
@@ -7044,7 +7065,7 @@ input[type=number] {
 }
 
 .p2p-trade-section .custom--tab .nav-link:hover {
-    border-color: hsl(var(--base)) !important;
+    border-color: #000 !important;
 }
 
 @media screen and (max-width: 1199px) {
@@ -7294,7 +7315,7 @@ input[type=number] {
 }
 
 .blog-item__title-link:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .blog-item__desc {
@@ -7578,7 +7599,7 @@ input[type=number] {
 }
 
 .contact-form .form-group .link:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .contact-form .form-group .btn {
@@ -7808,31 +7829,20 @@ input[type=number] {
 }
 
 /* Left Content Css */
-.account-left {
-    width: 40%;
-    position: relative;
-    z-index: 1;
-    padding: 88px 15px 20px;
-    background: var(--gradient-bg);
-}
+
 
 @media screen and (max-width: 1499px) {
     .account-left {
-        padding: 130px 10px 10px;
+        padding: ;
     }
 }
 
 @media screen and (max-width: 1399px) {
     .account-left {
-        padding: 150px 10px 10px;
+    
     }
 }
 
-@media screen and (max-width: 991px) {
-    .account-left {
-        display: none;
-    }
-}
 
 /* Right Content Css */
 .account-right {
@@ -7841,11 +7851,7 @@ input[type=number] {
     padding-top: 100px;
 }
 
-@media screen and (max-width: 991px) {
-    .account-right {
-        width: 100%;
-    }
-}
+
 
 .account-form-wrapper {
     position: relative;
@@ -7881,7 +7887,7 @@ input[type=number] {
 }
 
 .account-form-wrapper .sub-title {
-    color: hsl(var(--base));
+    color: #000;
     font-weight: 600;
     margin-bottom: 3px;
 }
@@ -7927,7 +7933,7 @@ input[type=number] {
 }
 
 .account-form .form-group .switch .link:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .account-form .form-group .forgot {
@@ -7936,7 +7942,7 @@ input[type=number] {
 }
 
 .account-form .form-group .forgot:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .account-footer {
@@ -8020,7 +8026,7 @@ input[type=number] {
 }
 
 .account-footer__right-link:hover {
-    color: hsl(var(--base));
+    color: #000;
 }
 
 .account-footer__right-link:last-of-type {
@@ -8102,8 +8108,8 @@ input[type=number] {
 }
 
 .sell-category-number .item.active .number {
-    color: hsl(var(--heading-color));
-    background:hsl(0, 100%, 0%);
+    color: #FEFFFF;
+        background: #1D5550;
 }
 
 .sell-card {
@@ -8127,7 +8133,9 @@ input[type=number] {
 }
 
 .sell-card__buttons button.active {
-    background: hsl(var(--border-color)/0.2);
+    background: #D2DDDD;
+        border: 1px solid #1D5550;
+        color: #1D5550;
 }
 
 
@@ -8250,7 +8258,7 @@ input[type=number] {
 }
 
 .blog-details .social-list__link:hover {
-    border-color: hsl(var(--base));
+    border-color: #000;
     color: hsl(var(--white));
 }
 
@@ -8258,7 +8266,7 @@ input[type=number] {
     background-color: hsl(var(--base)/0.1);
     padding: 30px 20px;
     border-radius: 5px;
-    border-left: 3px solid hsl(var(--base));
+    border-left: 3px solid #000;
     margin-bottom: 20px;
 }
 
@@ -8318,8 +8326,9 @@ input[type=number] {
 }
 
 .sidebar-menu-list__item.active>a {
-    color: hsl(var(--warning));
-    background: hsl(var(--base-two)/0.2);
+    color: #1D5550;
+        background: #90A3A2;
+        ;
 }
 
 .sidebar-menu-list__item:last-of-type .sidebar-menu-list__link {
@@ -8374,12 +8383,12 @@ input[type=number] {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    background-color: #ffffff;
+    background-color: #D2DDDD;
     border-radius: 5px;
     transition: all 0.3s;
     overflow: hidden;
     align-items: center;
-    border: 1px solid #ebebeb;
+    border: 2px solid #1D5550;
     position: relative;
     z-index: 1;
 }
@@ -8405,7 +8414,7 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #1D5550;
     overflow: hidden;
 }
 
@@ -8424,14 +8433,15 @@ input[type=number] {
 }
 
 .d-widget__caption {
-    color: #fca120;
-    font-weight: 600;
+    color: #1D5550;
+    font-weight: 800;
     margin-bottom: 6px;
+    font-size: larger;
 }
 
 .d-widget__amount {
     font-size: 24px;
-    color: #8b8b8b;
+    color:#1D5550 ;
     word-break: break-all;
     font-family: 'Rajdhani', sans-serif;
 }

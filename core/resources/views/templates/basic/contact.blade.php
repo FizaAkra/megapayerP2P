@@ -14,25 +14,25 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>@lang('Name')</label>
-                                    <input name="name" type="text" class="form-control" value="{{ old('name',@$user->fullname) }}" @if($user) readonly @endif required>
+                                    <input name="name" type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ old('name',@$user->fullname) }}" @if($user) readonly @endif required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>@lang('Email')</label>
-                                    <input name="email" type="email" class="form-control" value="{{  old('email',@$user->email) }}" @if($user) readonly @endif required>
+                                    <input name="email" type="email" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{  old('email',@$user->email) }}" @if($user) readonly @endif required>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label>@lang('Subject')</label>
-                                    <input name="subject" type="text" placeholder="@lang('Write your subject')" class="form-control" value="{{ old('subject') }}" required>
+                                    <input name="subject" type="text" placeholder="@lang('Write your subject')" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="{{ old('subject') }}" required>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label>@lang('Message')</label>
-                                    <textarea name="message" wrap="off" placeholder="@lang('Write your message')" class="form-control">{{ old('message') }}</textarea>
+                                    <textarea name="message" wrap="off" placeholder="@lang('Write your message')" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;">{{ old('message') }}</textarea>
                                 </div>
                             </div>
 

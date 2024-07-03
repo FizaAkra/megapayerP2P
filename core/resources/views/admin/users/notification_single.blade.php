@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label >@lang('Subject') </label>
-                                <input type="text" class="form-control" placeholder="@lang('Email subject')" name="subject"  required/>
+                                <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Email subject')" name="subject"  required/>
                             </div>
                             <div class="form-group col-md-12">
                                 <label >@lang('Message') </label>

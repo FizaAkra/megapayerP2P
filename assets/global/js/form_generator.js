@@ -27,7 +27,7 @@ class FormGenerator{
             </select>`;
             var title = `File Extensions <small class="text--danger">*</small> <small class="text-primary">(Separate each element by comma)</small>`;
         }else{
-            var field = `<input type="text" name="options[]" class="form-control" required>`;
+            var field = `<input type="text" name="options[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>`;
             addNew = `<button type="button" class="btn btn-sm btn--primary addOption"><i class="las la-plus me-0"></i></button>`;
             var title = `Add Options`;
         }
@@ -56,7 +56,7 @@ class FormGenerator{
         return `
             <div class="form-group">
                 <div class="input-group">
-                    <input type="text" name="options[]" class="form-control" required>
+                    <input type="text" name="options[]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                     <button type="button" class="btn btn--danger input-group-text removeOption"><i class="las la-times"></i></button>
                 </div>
             </div>
@@ -99,11 +99,11 @@ class FormGenerator{
             <div class="card-body">
                 <div class="form-group">
                     <label>Label</label>
-                    <input type="text" name="form_generator[form_label][]" class="form-control" value="${formItem.label}" readonly>
+                    <input type="text" name="form_generator[form_label][]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="${formItem.label}" readonly>
                 </div>
                 <div class="form-group">
                     <label>Type</label>
-                    <input type="text" name="form_generator[form_type][]" class="form-control" value="${formItem.type}" readonly>
+                    <input type="text" name="form_generator[form_type][]" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" value="${formItem.type}" readonly>
                 </div>
                 <div class="btn-group w-100">
                     <button type="button" class="btn btn--primary editFormData" data-form_item='${JSON.stringify(formItem)}' data-update_id="${updateId}"><i class="las la-pen"></i></button>
@@ -180,7 +180,7 @@ class FormGenerator{
             optionItem += `
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" name="options[]" value="${option}" class="form-control" required>
+                        <input type="text" name="options[]" value="${option}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                         ${isRemove}
                     </div>
                 </div>

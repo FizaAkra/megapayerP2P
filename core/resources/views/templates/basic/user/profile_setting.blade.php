@@ -13,10 +13,39 @@
                         <div class="profile-setting-sidebar">
                             <div class="profile-thumb-wrapper text-center">
                                 <div class="profile-thumb">
-                                    <div class="avatar-preview">
-                                        <div class="profilePicPreview" style="background-image: url({{ getImage($profileImage->path . '/' . @$user->image, null, true) }})"></div>
-                                    </div>
-                                    <div class="avatar-edit" title="@lang('jpg, jpeg, png image only')">
+    <div class="avatar-preview">
+        <div class="profilePicPreview" id="profilePicPreview" style="background-image: url({{ getImage($profileImage->path . '/' . @$user->image, null, true) }})"></div>
+    </div>
+    <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;">
+    <button type="button" id="uploadButton">Upload Image/GIF/Video</button>
+</div>
+
+<script>
+document.getElementById('uploadButton').addEventListener('click', function () {
+    document.getElementById('fileInput').click();
+});
+
+document.getElementById('fileInput').addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById('profilePicPreview');
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const fileType = file.type.split('/')[0];
+        if (fileType === 'image') {
+            preview.style.backgroundImage = `url(${e.target.result})`;
+            preview.innerHTML = ''; // Clear any previous video element
+        } else if (fileType === 'video') {
+            preview.style.backgroundImage = '';
+            preview.innerHTML = `<video controls style="max-width: 100%; max-height: 100%;"><source src="${e.target.result}" type="${file.type}"></video>`;
+        }
+    }
+
+    reader.readAsDataURL(file);
+});
+</script>
+
+                                    <div class="avatar-edit" title="@lang('jpg, jpeg, png, gif, mp4 only')">
                                         <input type='file' class="profilePicUpload" id="profilePicUpload1" name="image" accept=".jpg, .jpeg, .png" />
                                         <label for="profilePicUpload1"><i class="las la-upload"></i> @lang('Update')</label>
                                     </div>
@@ -57,31 +86,31 @@
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label for="InputFirstname">@lang('First Name')</label>
-                                        <input type="text" class="form-control" id="InputFirstname" name="firstname" placeholder="@lang('First Name')" value="{{ $user->firstname }}" minlength="3">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="InputFirstname" name="firstname" placeholder="@lang('First Name')" value="{{ $user->firstname }}" minlength="3">
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label for="lastname">@lang('Last Name')</label>
-                                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="@lang('Last Name')" value="{{ $user->lastname }}" required>
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="lastname" name="lastname" placeholder="@lang('Last Name')" value="{{ $user->lastname }}" required>
                                     </div>
 
                                     <div class="form-group col-sm-6">
                                         <label for="state">@lang('State')</label>
-                                        <input type="text" class="form-control" id="state" name="state" placeholder="@lang('state')" value="{{ @$user->address->state }}" required="">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="state" name="state" placeholder="@lang('state')" value="{{ @$user->address->state }}" required="">
                                     </div>
 
                                     <div class="form-group col-sm-6">
                                         <label for="zip">@lang('Zip Code')</label>
-                                        <input type="text" class="form-control" id="zip" name="zip" placeholder="@lang('Zip Code')" value="{{ @$user->address->zip }}" required="">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="zip" name="zip" placeholder="@lang('Zip Code')" value="{{ @$user->address->zip }}" required="">
                                     </div>
 
                                     <div class="form-group col-sm-6">
                                         <label for="city">@lang('City')</label>
-                                        <input type="text" class="form-control" id="city" name="city" placeholder="@lang('City')" value="{{ @$user->address->city }}" required="">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="city" name="city" placeholder="@lang('City')" value="{{ @$user->address->city }}" required="">
                                     </div>
 
                                     <div class="form-group col-sm-6">
                                         <label for="address">@lang('Address')</label>
-                                        <input type="text" class="form-control" id="address" name="address" placeholder="@lang('Address')" value="{{ @$user->address->address }}" required="">
+                                        <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" id="address" name="address" placeholder="@lang('Address')" value="{{ @$user->address->address }}" required="">
                                     </div>
                                 </div>
                                 <div class="form-group  mb-0 mt-3">

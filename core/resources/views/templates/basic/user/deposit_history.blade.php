@@ -14,7 +14,7 @@
                             </select>
                         </div>
                         <div class="flex-fill">
-                            <input type="text" name="search" value="{{ request()->search }}" class="form-control" placeholder="@lang('TRX No.')">
+                            <input type="text" name="search" value="{{ request()->search }}" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('TRX No.')">
                         </div>
                         <div class="flex-fill">
                             <button type="submit" class="btn--base w-100"><i class="la la-search"></i> @lang('Search')</button>

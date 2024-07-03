@@ -2,11 +2,11 @@
     <div class="form-group">
         <label class="form-label">{{ __($data->name) }}</label>
         @if ($data->type == 'text')
-            <input type="text" class="form-control" name="{{ $data->label }}" value="{{ old($data->label) }}" @if ($data->is_required == 'required') required @endif>
+            <input type="text" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $data->label }}" value="{{ old($data->label) }}" @if ($data->is_required == 'required') required @endif>
         @elseif($data->type == 'textarea')
-            <textarea class="form-control" name="{{ $data->label }}" @if ($data->is_required == 'required') required @endif>{{ old($data->label) }}</textarea>
+            <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $data->label }}" @if ($data->is_required == 'required') required @endif>{{ old($data->label) }}</textarea>
         @elseif($data->type == 'select')
-            <select class="form-control" name="{{ $data->label }}" @if ($data->is_required == 'required') required @endif>
+            <select class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="{{ $data->label }}" @if ($data->is_required == 'required') required @endif>
                 <option value="">@lang('Select One')</option>
                 @foreach ($data->options as $item)
                     <option value="{{ $item }}" @selected($item == old($data->label))>{{ __($item) }}</option>

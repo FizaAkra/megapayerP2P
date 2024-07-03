@@ -135,7 +135,7 @@
 
             <div class="card mt-30">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">@lang('Information of') {{ $user->fullname }}</h5>
+                    <h5 class="card-title mb-0" style="color:#1D5550">@lang('Information of') {{ $user->fullname }}</h5>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('admin.users.update', [$user->id]) }}" method="POST" enctype="multipart/form-data">
@@ -161,25 +161,25 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group ">
-                                            <label>@lang('First Name')</label>
-                                            <input class="form-control" type="text" name="firstname" required value="{{ $user->firstname }}">
+                                            <label style="color:#1D5550">@lang('First Name')</label>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="firstname" required value="{{ $user->firstname }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-control-label">@lang('Last Name')</label>
-                                            <input class="form-control" type="text" name="lastname" required value="{{ $user->lastname }}">
+                                            <label class="form-control-label" style="color:#1D5550">@lang('Last Name')</label>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="lastname" required value="{{ $user->lastname }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>@lang('Email') </label>
-                                            <input class="form-control" type="email" name="email" value="{{ $user->email }}" required>
+                                            <label style="color:#1D5550">@lang('Email') </label>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="email" name="email" value="{{ $user->email }}" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>@lang('Mobile Number') </label>
+                                            <label style="color:#1D5550">@lang('Mobile Number') </label>
                                             <div class="input-group ">
                                                 <span class="input-group-text mobile-code"></span>
                                                 <input type="number" name="mobile" value="{{ old('mobile') }}" id="mobile" class="form-control checkUser" required>
@@ -188,29 +188,29 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>@lang('City')</label>
-                                            <input class="form-control" type="text" name="city" value="{{ @$user->address->city }}">
+                                            <label style="color:#1D5550">@lang('City')</label>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="city" value="{{ @$user->address->city }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group ">
-                                            <label>@lang('State')</label>
-                                            <input class="form-control" type="text" name="state" value="{{ @$user->address->state }}">
+                                            <label style="color:#1D5550">@lang('State')</label>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="state" value="{{ @$user->address->state }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group ">
-                                            <label>@lang('Zip/Postal')</label>
-                                            <input class="form-control" type="text" name="zip" value="{{ @$user->address->zip }}">
+                                            <label style="color:#1D5550">@lang('Zip/Postal')</label>
+                                            <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="zip" value="{{ @$user->address->zip }}">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group ">
-                                            <label>@lang('Country')</label>
-                                            <select name="country" class="form-control">
+                                            <label style="color:#1D5550">@lang('Country')</label>
+                                            <select name="country" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;">
                                                 @foreach ($countries as $key => $country)
                                                     <option data-mobile_code="{{ $country->dial_code }}" value="{{ $key }}">{{ __($country->country) }}</option>
                                                 @endforeach
@@ -225,7 +225,7 @@
                             <div class="col-md-12">
                                 <div class="form-group ">
                                     <label>@lang('Address')</label>
-                                    <input class="form-control" type="text" name="address" value="{{ @$user->address->address }}">
+                                    <input class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" type="text" name="address" value="{{ @$user->address->address }}">
                                 </div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>@lang('Select Wallet')</label>
-                            <select name="wallet_id" class="form-control" required>
+                            <select name="wallet_id" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" required>
                                 @foreach ($wallets as $wallet)
                                     <option value="{{ $wallet->id }}" data-code="{{ __($wallet->crypto->code) }}">{{ __($wallet->crypto->code) }}</option>
                                 @endforeach
@@ -297,13 +297,13 @@
                         <div class="form-group">
                             <label>@lang('Amount')</label>
                             <div class="input-group">
-                                <input type="number" step="any" name="amount" class="form-control" placeholder="@lang('Please provide positive amount')" required>
+                                <input type="number" step="any" name="amount" class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Please provide positive amount')" required>
                                 <div class="input-group-text code"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>@lang('Remark')</label>
-                            <textarea class="form-control" placeholder="@lang('Remark')" name="remark" rows="4" required></textarea>
+                            <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" placeholder="@lang('Remark')" name="remark" rows="4" required></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -337,7 +337,7 @@
                             <h6 class="mb-2">@lang('If you ban this user he/she won\'t able to access his/her dashboard.')</h6>
                             <div class="form-group">
                                 <label>@lang('Reason')</label>
-                                <textarea class="form-control" name="reason" rows="4" required></textarea>
+                                <textarea class="form-control" style="background-color:#D2DDDD; border:1px solid #1D5550;" name="reason" rows="4" required></textarea>
                             </div>
                         @else
                             <p><span>@lang('Ban reason was'):</span></p>
